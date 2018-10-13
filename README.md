@@ -1,13 +1,10 @@
----
-title: Tips for an Archlinux installation
-author: by LT
-...
+# Tips for an Archlinux installation
 
 > Here are some brief notes about a basic `archlinux` installation. These notes
 > are to be read together with the installation guide, and they reflect my
 > *personal* preferences.
 
-# Partitions
+## Partitions
 
 I create 4 partitions: 
 
@@ -52,7 +49,7 @@ reboot
 ```
 
 
-# Network manager
+## Network manager
 
 To avoid manually configurating networks after reboot, install `networkmanager`:
 
@@ -69,7 +66,7 @@ systemctl enable NetworkManager
 After reboot internet works out of the box. 
 
 
-# User add
+## User add
 
 Add a new user 
 
@@ -81,7 +78,7 @@ and give him root privileges by running `visudo` and uncommenting wheel group
 (optionally pass the `NOPASSWD` option).
 
 
-# Prettify console
+## Prettify console
 
 Install `terminus` fonts:
 
@@ -96,7 +93,7 @@ echo "FONT=ter-114n" >> /etc/vconsole.conf
 ```
 
 
-# Changing default shell
+## Changing default shell
 
 `zsh` is a much more powerful shell than bash. To list all installed shells,
 run:
