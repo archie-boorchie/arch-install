@@ -12,36 +12,34 @@
 echo -ne "\nWARNING! This script may be harmfull for your system.\nDo you want to continue?\n\n\n"
 read -p "Type 'yes' to continue.    " yn
 
-if [ "$yn" = "yes" ]; then
-    echo "Running the script symlinks.sh"
+if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
+    echo "Running the script symlinks.sh ..."
     
     # dotfiles belonging to /home/user/
     linkstohome=(
-    archey3.cfg
-    bash_logout
+    aliases
     bash_profile
     bashrc
     elinks
+    functions
+    archey3.cfg # # #
+    tmux.conf
     vim
     vimrc
-	Xmodmap
 	xinitrc
+	Xmodmap
+    zprofile
     zshrc
     )
     
     # dotfiles belonging to /home/user/.config
     linkstoconfig=(
-    aurman
-    fish
     i3
     llpp.conf
-    neofetch
-    powerline
     qutebrowser
     ranger
     rofi
     termite
-    vifm
     )
     
     echo -ne "\ncreating softlinks to /home/user/\n"
@@ -57,8 +55,6 @@ if [ "$yn" = "yes" ]; then
         	rm -rf ~/.config/$X
         	ln -sfn ~/dotfiles/$X ~/.config/$X
         done
-    echo -ne "\ndone!\n"
-
     echo -ne "\nYour config files are now loaded!\n"
 else
     echo -ne "\nYou may run the script symlinks.sh manually at any time.\n"

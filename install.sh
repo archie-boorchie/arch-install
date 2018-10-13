@@ -19,9 +19,8 @@
 corepackages=(
 #
 ### X.org 
-xorg-server # Xorg X server
-xorg-xinit # X.Org initialisation program
 xorg # Install the whole X group
+xorg-xinit # X.Org initialisation program
 #
 ### Terminal 
 termite # A simple VTE-based terminal
