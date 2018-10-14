@@ -307,7 +307,7 @@ echo -ne "\nAUR packages are ready\n"
 # Final step: manage dotfiles, create symlinks for them
 echo -ne "\nCreating symlinks for the dotfiles\n"
 
-sh ~/dotfiles/symlinks.sh
+sh ~/arch-install/symlinks.sh
 
 echo -ne "\nSystem is now ready to use!\n"
 
