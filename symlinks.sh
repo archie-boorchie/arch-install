@@ -22,7 +22,6 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     bashrc
     elinks
     functions
-    archey3.cfg # # #
     tmux.conf
     vim
     vimrc
