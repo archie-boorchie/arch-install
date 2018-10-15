@@ -23,7 +23,9 @@ xorg # Install the whole X group
 xorg-xinit # X.Org initialisation program
 xorg-xinput # Small commandline tool to configure devices	
 xf86-input-synaptics # Synaptics driver for notebook touchpads
-
+#
+### Secure shell 
+openssh # Premier connectivity tool for remote login with the SSH protocol
 #
 ### Screens utils
 xorg-xrandr # Primitive command line interface to RandR extension
