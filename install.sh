@@ -21,6 +21,19 @@ corepackages=(
 ### X.org 
 xorg # Install the whole X group
 xorg-xinit # X.Org initialisation program
+xorg-xinput # Small commandline tool to configure devices	
+xf86-input-synaptics # Synaptics driver for notebook touchpads
+
+#
+### Screens utils
+xorg-xrandr # Primitive command line interface to RandR extension
+arandr # Provide a simple visual front end for XRandR 1.2.
+xorg-xbacklight # RandR-based backlight control application
+#
+### Sound management
+alsa-utils # An alternative implementation of Linux sound support
+pulseaudio # A featureful, general-purpose sound server
+pasystray # PulseAudio system tray (a replacement for padevchooser)
 #
 ### Terminal 
 termite # A simple VTE-based terminal
@@ -34,6 +47,9 @@ python2 # Python v2. Needed many times for package management
 python # Latest version of Python (currently v3)
 python-matplotlib # A python plotting library, making publication quality plots
 python-numpy # Scientific tools for Python
+#
+### C compiler
+gcc # The GNU Compiler Collection - C and C++ frontends	
 #
 ### Packages for pacman
 reflector # A script to retrieve and filter the latest Pacman mirror list
@@ -241,15 +257,10 @@ echo -ne "\naurman will now be used to manage the AUR packages\n"
 
 aurpackages=(
 #
-### TTYs 
-libtsm # kmscon dependency 
-kmscon # Terminal emulator based on Kernel Mode Setting (KMS)
-#
 ### Media players
 tiv # A simple image viewer that displays images directly in the terminal
 #
 ### Python modules
-python-grip # Preview GitHub Markdown files like Readme locally before committing them
 python-nmap # A Python library which helps in using the nmap port scanner
 # 
 ### Archive management
@@ -277,21 +288,9 @@ crop-pdf # command line tool to crop PDF files
 fbgrab # A framebuffer screenshot grabber
 screenkey # Show the keys you type on the screen
 #
-### Screens utils
-xorg-xrandr # Primitive command line interface to RandR extension
-arandr # Provide a simple visual front end for XRandR 1.2.
-xorg-xbacklight # RandR-based backlight control application
-#
-### Utils to check PDF files for differences 
-diff-pdf-git # A simple tool for visually comparing two PDF files
-pdiff-git # Find differences between PDF documents
-visual-pdf-diff-git # Merges two PDF files into one PDF file and highlights their visual differences
-# also check a script in https://gist.github.com/timabell/9616807b2fe3fa60f234
-#
 ### Tabletop RPGs
 roll # A tool to roll a user-defined dice sequence and display the result
-rolisteam # Virtual tabletop software. It helps you to manage tabletop role playing games with remote friends/players.
-pcgen-git # An RPG Character Generator
+# rolisteam # Virtual tabletop software. It helps you to manage tabletop role playing games with remote friends/players.
 #
 )
 

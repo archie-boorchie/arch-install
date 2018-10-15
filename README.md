@@ -4,6 +4,15 @@
 > are to be read together with the installation guide, and they reflect my
 > *personal* preferences.
 
+## Beep sound in TTY
+
+To disable the annoying beeping sound in TTY, run 
+
+``` bash
+echo "setterm -blength 0" >> /etc/profile.d/disable-beep.sh
+```
+
+
 ## Partitions
 
 I create 4 partitions: 
@@ -38,7 +47,7 @@ After change root, install `reflector`, generate `mirrorlist` by
 reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
-and install `base-devel`, `vim`, `git`, `networkmanager`, `grub`.
+and install `base-devel`, `gvim`, `git`, `networkmanager`, `dialog`, `grub` and `efibootmgr`.
 
 Change `kernel` to `lts` (keep the linux `kernel` as a backup) and install headers: 
 
@@ -111,4 +120,5 @@ $ chsh -s full-path-to-shell
 where `full-path-to-shell` is the full path as given by `chsh -l`.
 
 If you now log out and log in again, you will be greeted by the new shell. 
+
 
