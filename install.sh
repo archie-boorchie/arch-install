@@ -91,7 +91,8 @@ gvim # Vi Improved, a highly configurable, improved version of the vi text edito
 code # The Open Source build of Visual Studio Code (vscode) editor
 #
 ### ebooks, pdf viewers etc
-mupdf # as an alternative I have llpp from AUR
+mupdf # Lightweight PDF and XPS viewer
+# llpp # opengl accelerated pdf viewer based on mupdf
 fbreader # An e-book reader for Linux
 # something more mainstream? maybe evince or zathura
 #
@@ -154,9 +155,10 @@ arm # Terminal status monitor for Tor relays
 networkmanager # Network connection manager and user applications
 nm-connection-editor # NetworkManager GUI connection editor and widgets
 network-manager-applet # Applet for managing network connections
-dnsmasq # Lightweight, easy to configure DNS forwarder and DHCP server
+# dnsmasq # Lightweight, easy to configure DNS forwarder and DHCP server
 curl # An URL retrieval utility and library
 wget # Network utility to retrieve files from the Web
+speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
 #
 ### Vpn 
 openvpn # An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
@@ -174,24 +176,23 @@ irssi # Modular text mode IRC client with Perl scripting
 ### Science 
 calc # Arbitrary precision console calculator
 stellarium # A stellarium with great graphics and a nice database of sky-objects
-celestia # Real-time space simulation
-units # Converts between different units
-kalzium # Periodic Table of Elements
-marble # Desktop Globe
+# celestia # Real-time space simulation
+# units # Converts between different units
+# kalzium # Periodic Table of Elements
+# marble # Desktop Globe
 ## add more map tools and meteorology tools
 #
 ### Office apps 
-libreoffice-fresh # with new program enhancements
-hunspell # for spell-checking
-hunspell-en # for english spell-checking
-hunspell-gr # for greek spell-checking
-catdoc # A convertor for Microsoft Word, Excel, PowerPoint and RTF Files to text
+# libreoffice-fresh # with new program enhancements
+# hunspell # for spell-checking
+# hunspell-en # for english spell-checking
+# hunspell-gr # for greek spell-checking
 # 
 ### Utils to check PDF files for differences 
 diffpdf # Diffing pdf files visually or textually
 #
 ### ebook convert etc
-calibre # Ebook management application
+# calibre # Ebook management application
 #
 ### Time management
 calcurse # A text-based personal organizer
@@ -259,25 +260,25 @@ echo -ne "\naurman will now be used to manage the AUR packages\n"
 
 aurpackages=(
 #
+### Hide cursor
+unclutter-xfixes-git # unclutter-xfixes is a rewrite of unclutter using the x11-xfixes extension
 ### Media players
-tiv # A simple image viewer that displays images directly in the terminal
 #
 ### Python modules
 python-nmap # A Python library which helps in using the nmap port scanner
 # 
 ### Archive management
-dtrx # An intelligent archive extraction tool
+# dtrx # An intelligent archive extraction tool
 #
 ### Tor 
 tor-browser # Tor Browser Bundle: anonymous browsing using Firefox and Tor (international PKGBUILD)
 #
 ### ebooks, pdf viewers etc
-llpp 
 epubcheck # A tool to validate epub files
 #
 ### Data syncing
-dropbox
-owncloud
+dropbox # A free service that lets you bring your photos, docs, and videos anywhere and share them easily
+# owncloud # A cloud server to store your files centrally on a hardware controlled by you
 #
 ### Network utilities
 speedtest # check internet speed in terminal
