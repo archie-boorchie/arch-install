@@ -10,7 +10,7 @@
 
 # Since this script is quite dangerous, we ask user for confirmation.
 echo -ne "\nWARNING! This script may be harmfull for your system.\nDo you want to continue?\n\n\n"
-read -p "Type 'yes' to continue.    " yn
+read -p "Type 'yes' to continue.  " yn
 
 if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     echo "Running the script symlinks.sh ..."
@@ -51,10 +51,11 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     echo -ne "\ncreating softlinks to /home/user/.config\n"
     for X in "${linkstoconfig[@]}"
         do
+            mkdir -p ~/.config
         	rm -rf ~/.config/$X
         	ln -sfn ~/dotfiles/$X ~/.config/$X
         done
-    echo -ne "\nYour config files are now loaded!\n"
+    echo -ne "\nYour configuration files are now loaded!\n"
 else
     echo -ne "\nYou may run the script symlinks.sh manually at any time.\n"
 fi

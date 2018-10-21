@@ -245,6 +245,15 @@ done
 
 echo -ne "\nOfficial repository packages are ready\n"
 
+
+# Create a GPG key
+read -p "Generate a GPG key before installing AUR packages (Y/n)?  " yn
+yn=${yn:-yes}
+if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
+    gpg --full-gen-key
+fi
+
+
 # Install aurman to help with the AUR package management
 echo -ne "\nInstalling aurman to help with the AUR package management\n"
 cd ~
