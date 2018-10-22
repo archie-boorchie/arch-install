@@ -209,13 +209,14 @@ virtualbox
 ### Media players
 feh # Fast and light imlib2-based image viewer 
 mplayer # Media player for Linux 
-mpv # a free, open source, and cross-platform media player 
+mpv # A free, open source, and cross-platform media player 
 #
 ### Toolkits for image etc convertions and so on 
 imagemagick # An image viewing/manipulation program
 #
 ### Screen capturing
 maim #  Simple command line utility that takes screenshots (better than scrot)
+fbgrab # A framebuffer screenshot grabber
 # add a screencast tool
 #
 ### Presentation, multiscreen etc
@@ -291,15 +292,11 @@ epubcheck # A tool to validate epub files
 dropbox # A free service that lets you bring your photos, docs, and videos anywhere and share them easily
 # owncloud # A cloud server to store your files centrally on a hardware controlled by you
 #
-### Network utilities
-speedtest # check internet speed in terminal
-#
 ### PDF utilities
 pdftk # pdftk is a simple tool for doing everyday things with PDF documents
 crop-pdf # command line tool to crop PDF files
 #
 ### Screenshot, video recording
-fbgrab # A framebuffer screenshot grabber
 screenkey # Show the keys you type on the screen
 #
 ### Tabletop RPGs
