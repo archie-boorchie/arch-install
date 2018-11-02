@@ -21,8 +21,9 @@ corepackages=(
 ### X.org 
 xorg # Install the whole X group
 xorg-xinit # X.Org initialisation program
-xorg-xinput # Small commandline tool to configure devices	
+xorg-xinput # Small commandline tool to configure devices
 xf86-input-synaptics # Synaptics driver for notebook touchpads
+xdotool # Command-line X11 automation tool
 # you may also need an extra driver for intel
 #xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
 #
