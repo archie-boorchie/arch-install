@@ -27,6 +27,11 @@ xdotool # Command-line X11 automation tool
 # you may also need an extra driver for intel
 #xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
 #
+### Clipboard utilities
+xclip # A lightweight, command-line based interface to the clipboard
+clipmenu # Clipboard management using dmenu
+clipnotify # Polling-free clipboard notifier
+#
 ### Secure shell 
 openssh # Premier connectivity tool for remote login with the SSH protocol
 #
