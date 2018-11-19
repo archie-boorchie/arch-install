@@ -285,6 +285,9 @@ aurpackages=(
 unclutter-xfixes-git # unclutter-xfixes is a rewrite of unclutter using the x11-xfixes extension
 ### Media players
 #
+### Fonts
+ttf-material-design-icons-git # Material Design Icons Web Font (I use the Arch symbol)
+#
 ### Python modules
 python-nmap # A Python library which helps in using the nmap port scanner
 # 
