@@ -12,14 +12,18 @@
 #                                                    #
 ######################################################
 
-# During basic installation base and base-devel are assumed to be installed.
+# We start by creating a list of the packages we want to install.
+# base and base-devel are assumed to be installed during basic installation.
 
-# First, we create a list of the packages from the official repositories.
+# For packages that can be found in the official repositories, only the name is
+# provided. If the package is to be installed from the AUR repository, we use
+# the nomenclature [AUR]package-name, to distinguish the package and later
+# install it correctly. 
 
-corepackages=(
+packages=(
 #
 ### X.org 
-xorg # Install the whole X group
+xorg # Install the X package group
 xorg-xinit # X.Org initialisation program
 xorg-xinput # Small commandline tool to configure devices
 xf86-input-synaptics # Synaptics driver for notebook touchpads
@@ -30,6 +34,9 @@ xdotool # Command-line X11 automation tool
 ### Keyboard
 xcape # Configure modifier keys to act as other keys when pressed and released on their own	
 #
+### Hide cursor
+[AUR]unclutter-xfixes-git # unclutter-xfixes is a rewrite of unclutter using the x11-xfixes extension
+#
 ### Clipboard utilities
 xclip # A lightweight, command-line based interface to the clipboard
 clipmenu # Clipboard management using dmenu
@@ -38,7 +45,7 @@ clipnotify # Polling-free clipboard notifier
 ### Secure shell 
 openssh # Premier connectivity tool for remote login with the SSH protocol
 #
-### Screens utils
+### Screen utils
 xorg-xrandr # Primitive command line interface to RandR extension
 arandr # Provide a simple visual front end for XRandR 1.2.
 xorg-xbacklight # RandR-based backlight control application
@@ -60,6 +67,8 @@ python2 # Python v2. Needed many times for package management
 python # Latest version of Python (currently v3)
 python-matplotlib # A python plotting library, making publication quality plots
 python-numpy # Scientific tools for Python
+nmap # Utility for network discovery and security auditing
+[AUR]python-nmap # A Python library which helps in using the nmap port scanner
 #
 ### C compiler
 gcc # The GNU Compiler Collection - C and C++ frontends	
@@ -92,7 +101,6 @@ perl-json-xs
 dunst # Customizable and lightweight notification-daemon
 # 
 git # Git is used for aur packages, dotfile management etc
-# It is probably already be installed for cloning this repository
 #
 ### Editors
 # console
@@ -106,9 +114,6 @@ mupdf # Lightweight PDF and XPS viewer
 # llpp # opengl accelerated pdf viewer based on mupdf
 fbreader # An e-book reader for Linux
 # something more mainstream? maybe evince or zathura
-#
-### Printing
-cups # for printing
 #
 ### LaTeX
 texlive-most # includes TeX Live applications
@@ -130,7 +135,6 @@ thunar-volman # Automatic management of removeable devices in Thunar
 #
 ### Printing
 cups  # the CUPS Printing System - daemon package
-# You now have to Enable and start org.cups.cupsd.service (maybe automatically from this script)
 print-manager # GUI-tool for managing print jobs and printers (KDE)
 #
 ### Launcher
@@ -145,14 +149,15 @@ ttf-dejavu
 ttf-noto
 ttf-font-awesome
 awesome-terminal-fonts
+[AUR]ttf-material-design-icons-git # Material Design Icons Web Font (I use the Arch symbol)
 #
 ### Icon themes
 adwaita-icon-theme
 # 
 ### Internet browsers
 # gui
-qutebrowser # A keyboard-driven, vim-like browser based on PyQt5 (main browser)
-firefox # Standalone web browser from mozilla.org (for some demanding tasks)
+qutebrowser # A keyboard-driven, vim-like browser based on PyQt5
+firefox # Standalone web browser from mozilla.org
 flashplugin # flash plugin for firefox
 # console
 elinks # An advanced and well-established feature-rich text mode web browser
@@ -161,6 +166,7 @@ w3m # Text-based Web browser as well as pager
 ### Tor 
 tor # Anonymizing overlay network
 arm # Terminal status monitor for Tor relays
+[AUR]tor-browser # Tor Browser Bundle: anonymous browsing using Firefox and Tor (international PKGBUILD)
 #
 ### Network utilities 
 networkmanager # Network connection manager and user applications
@@ -199,10 +205,17 @@ stellarium # A stellarium with great graphics and a nice database of sky-objects
 # hunspell-en # for english spell-checking
 # hunspell-gr # for greek spell-checking
 # 
-### Utils to check PDF files for differences 
+### Data syncing
+[AUR]dropbox # A free service that lets you bring your photos, docs, and videos anywhere and share them easily
+# [AUR]owncloud # A cloud server to store your files centrally on a hardware controlled by you
+#
+### PDF utilities
+[AUR]pdftk # pdftk is a simple tool for doing everyday things with PDF documents
+[AUR]crop-pdf # command line tool to crop PDF files
 diffpdf # Diffing pdf files visually or textually
 #
-### ebook convert etc
+### ebook utilities
+[AUR]epubcheck # A tool to validate epub files
 # calibre # Ebook management application
 #
 ### Time management
@@ -226,6 +239,7 @@ imagemagick # An image viewing/manipulation program
 ### Screen capturing
 maim #  Simple command line utility that takes screenshots (better than scrot)
 fbgrab # A framebuffer screenshot grabber
+[AUR]screenkey # Show the keys you type on the screen
 # add a screencast tool
 #
 ### Presentation, multiscreen etc
@@ -237,8 +251,9 @@ fortune-mod
 cowsay
 cmatrix
 #
-### Uncategorised
-nmap # Utility for network discovery and security auditing
+### Tabletop RPGs
+[AUR]roll # A tool to roll a user-defined dice sequence and display the result
+# [AUR]rolisteam # Virtual tabletop software. It helps you to manage tabletop role playing games with remote friends/players.
 #
 )
 
@@ -248,9 +263,11 @@ sudo pacman -Syy
 
 # install official repository packages
 echo -ne "\nInstalling packages from official repositories\n"
-for X in "${corepackages[@]}"
+for X in "${packages[@]}"
 do
+    if [[ $X != *"[AUR]"* ]]; then
 	sudo pacman -S --noconfirm --needed $X
+    fi
 done
 
 echo -ne "\nOfficial repository packages are ready\n"
@@ -276,57 +293,34 @@ rm -rf aurman/
 echo -ne "\naurman will now be used to manage the AUR packages\n"
 
 
-# Now we create a list of packages from [AUR]. aurman is already installed via
-# git, and then it will be used to install the rest aur packages.
-
-aurpackages=(
-#
-### Hide cursor
-unclutter-xfixes-git # unclutter-xfixes is a rewrite of unclutter using the x11-xfixes extension
-### Media players
-#
-### Fonts
-ttf-material-design-icons-git # Material Design Icons Web Font (I use the Arch symbol)
-#
-### Python modules
-python-nmap # A Python library which helps in using the nmap port scanner
-# 
-### Archive management
-# dtrx # An intelligent archive extraction tool
-#
-### Tor 
-tor-browser # Tor Browser Bundle: anonymous browsing using Firefox and Tor (international PKGBUILD)
-#
-### ebooks, pdf viewers etc
-epubcheck # A tool to validate epub files
-#
-### Data syncing
-dropbox # A free service that lets you bring your photos, docs, and videos anywhere and share them easily
-# owncloud # A cloud server to store your files centrally on a hardware controlled by you
-#
-### PDF utilities
-pdftk # pdftk is a simple tool for doing everyday things with PDF documents
-crop-pdf # command line tool to crop PDF files
-#
-### Screenshot, video recording
-screenkey # Show the keys you type on the screen
-#
-### Tabletop RPGs
-roll # A tool to roll a user-defined dice sequence and display the result
-# rolisteam # Virtual tabletop software. It helps you to manage tabletop role playing games with remote friends/players.
-#
-)
+# Now we download packages from [AUR]. aurman  will be used to install the rest
+# aur packages.
 
 # install aur packages
 echo -ne "\nInstalling aur packages with aurman\n"
-for Y in "${aurpackages[@]}"
+for X in "${packages[@]}"
 do
-	aurman -S --noconfirm --needed $Y
+    if [[ $X == *"[AUR]"* ]]; then 
+    Y="$(echo "$X" | sed 's/\[AUR\]//')"
+    aurman -S --needed "$Y"
+    fi
 done
 
 echo -ne "\nAUR packages are ready\n"
 
+
 # Final step: manage dotfiles, create symlinks for them
+read -p "Do you want to clone the dotfiles repository from GitHub (Y/n)?  " yn
+yn=${yn:-yes}
+if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
+    # check if dotfiles directory exists in ~
+    if [ -d "dotfiles" ]; then
+        echo -ne "\nError: a dotfiles directory already exists!\n"
+    else
+        git clone https://github.com/archie-boorchie/dotfiles
+    fi
+fi
+
 echo -ne "\nCreating symlinks for the dotfiles\n"
 
 sh ~/arch-install/symlinks.sh
