@@ -58,6 +58,12 @@ pasystray # PulseAudio system tray (a replacement for padevchooser)
 ### Terminal 
 termite # A simple VTE-based terminal
 tmux # A terminal multiplexer	
+zsh # A very advanced and programmable command interpreter (shell) for UNIX
+zsh-syntax-highlighting	# Fish shell like syntax highlighting for Zsh
+zsh-autosuggestions	# Fish-like autosuggestions for zsh
+zsh-completions	# Additional completion definitions for Zsh
+zsh-history-substring-search # ZSH port of Fish history search (up arrow)
+zsh-lovers # A collection of tips, tricks and examples for the Z shell
 #
 ### Composite manager
 xcompmgr # Composite Window-effects manager for X.org
@@ -76,6 +82,7 @@ gcc # The GNU Compiler Collection - C and C++ frontends
 ### Packages for pacman
 reflector # A script to retrieve and filter the latest Pacman mirror list
 pacman-contrib # Contributed scripts and tools for pacman systems 
+pkgfile # A pacman .files metadata explorer
 #
 ### Core utilities
 tree # A directory listing program displaying a depth indented list of files
