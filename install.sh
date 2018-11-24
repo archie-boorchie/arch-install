@@ -69,11 +69,11 @@ zsh-lovers # A collection of tips, tricks and examples for the Z shell
 xcompmgr # Composite Window-effects manager for X.org
 #
 ### Python and python modules 
-python2 # Python v2. Needed many times for package management
-python # Latest version of Python (currently v3)
+python2 # A high-level scripting language
+python # Next generation of the python high-level scripting language
 python-matplotlib # A python plotting library, making publication quality plots
 python-numpy # Scientific tools for Python
-nmap # Utility for network discovery and security auditing
+nmap # Utility for network discovery and security auditing (needed for python-nmap)
 [AUR]python-nmap # A Python library which helps in using the nmap port scanner
 #
 ### C compiler
@@ -99,7 +99,7 @@ unzip # For extracting and viewing files in .zip archives
 # I do not use a display manager
 # 
 ### Window manager
-i3 # install the i3 group - i3gaps is the default
+i3 # Install the i3 group - i3gaps is the default
 # additionally, to save an i3 session we need
 perl-anyevent-i3
 perl-json-xs
@@ -107,7 +107,8 @@ perl-json-xs
 ### Desctop notification deamon
 dunst # Customizable and lightweight notification-daemon
 # 
-git # Git is used for aur packages, dotfile management etc
+### Version control
+git # The fast distributed version control system
 #
 ### Editors
 # console
@@ -145,22 +146,23 @@ cups  # the CUPS Printing System - daemon package
 print-manager # GUI-tool for managing print jobs and printers (KDE)
 #
 ### Launcher
-rofi
+rofi # A window switcher, application launcher and dmenu replacement
+dmenu # Generic menu for X
 #
 ### Fonts
 adobe-source-code-pro-fonts # Monospaced font family for user interface and coding environments
 adobe-source-sans-pro-fonts # Sans serif font family for user interface environments
 adobe-source-serif-pro-fonts # Serif typeface for setting text. Designed to complement Source Sans Pro
 terminus-font # Monospace bitmap font (for X11 and console) 
-ttf-dejavu
-ttf-noto
-ttf-font-awesome
-awesome-terminal-fonts
-[AUR]ttf-material-design-icons-git # Material Design Icons Web Font (I use the Arch symbol)
+ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
+noto-fonts # Google Noto TTF fonts
+ttf-font-awesome # Iconic font designed for Bootstrap
+awesome-terminal-fonts # fonts/icons for powerlines
+[AUR]ttf-material-design-icons-git # Material Design Icons Web Font (I use the Arch symbol from this font)
 #
 ### Icon themes
-adwaita-icon-theme
-# 
+adwaita-icon-theme # GNOME standard icons
+#
 ### Internet browsers
 # gui
 qutebrowser # A keyboard-driven, vim-like browser based on PyQt5
@@ -183,6 +185,9 @@ network-manager-applet # Applet for managing network connections
 curl # An URL retrieval utility and library
 wget # Network utility to retrieve files from the Web
 speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
+#
+### Torrent client
+transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
 #
 ### Vpn 
 openvpn # An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
