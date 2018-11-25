@@ -321,6 +321,12 @@ done
 echo -ne "\nAUR packages are ready\n"
 
 
+# Cleaning orphans
+echo -ne "Cleaning orphan packages from system.
+Please check if you wish to keep some of the packages!\n\n"
+sudo pacman -Rns $(pacman -Qtdq)
+
+
 # Final step: manage dotfiles, create symlinks for them
 read -p "Do you want to clone the dotfiles repository from GitHub (Y/n)?  " yn
 yn=${yn:-yes}
