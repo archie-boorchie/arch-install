@@ -22,6 +22,7 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     bashrc
     elinks
     functions
+    latexmkrc
     tmux.conf
     vim
     vimrc
