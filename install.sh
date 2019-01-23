@@ -55,6 +55,9 @@ alsa-utils # An alternative implementation of Linux sound support
 pulseaudio # A featureful, general-purpose sound server
 pasystray # PulseAudio system tray (a replacement for padevchooser)
 #
+### Sound recording
+audacity # A program that lets you manipulate digital audio waveforms
+#
 ### Terminal 
 termite # A simple VTE-based terminal
 tmux # A terminal multiplexer	
@@ -83,12 +86,15 @@ gcc # The GNU Compiler Collection - C and C++ frontends
 reflector # A script to retrieve and filter the latest Pacman mirror list
 pacman-contrib # Contributed scripts and tools for pacman systems 
 pkgfile # A pacman .files metadata explorer
+pkgstats # Submit a list of installed packages to the Arch Linux project
 #
 ### Core utilities
 tree # A directory listing program displaying a depth indented list of files
 fd # Simple, fast and user-friendly alternative to find
 mlocate # Merging locate/updatedb implementation
 htop # Interactive process viewer
+dosfstools # DOS filesystem utilities
+ntfs-3g # NTFS filesystem driver and utilities
 lolcat # a colourful alternative to cat 
 # 
 ### Archive management
@@ -120,8 +126,12 @@ code # The Open Source build of Visual Studio Code (vscode) editor
 ### ebooks, pdf viewers etc
 mupdf # Lightweight PDF and XPS viewer
 # llpp # opengl accelerated pdf viewer based on mupdf
-fbreader # An e-book reader for Linux
-# something more mainstream? maybe evince or zathura
+evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))	
+bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
+zathura # Minimalistic document viewer
+zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
+zathura-dvju # DjVu support for Zathura
+zathura-cb # Adds comic book support to zathura
 #
 ### LaTeX
 texlive-most # includes TeX Live applications
@@ -222,7 +232,7 @@ stellarium # A stellarium with great graphics and a nice database of sky-objects
 # [AUR]owncloud # A cloud server to store your files centrally on a hardware controlled by you
 #
 ### PDF utilities
-[AUR]pdftk # pdftk is a simple tool for doing everyday things with PDF documents
+[AUR]pdftk-bin # Swiss army knife for PDFs. Built from binary executables available in Debian repositories
 [AUR]crop-pdf # command line tool to crop PDF files
 diffpdf # Diffing pdf files visually or textually
 #
@@ -294,6 +304,8 @@ fi
 
 
 # Install aurman to help with the AUR package management
+# NOTE: now that aurman is discontinued, consider using another AUR helper, such
+# as pikaur or pakku.
 echo -ne "\nInstalling aurman to help with the AUR package management\n"
 cd ~
 git clone https://aur.archlinux.org/aurman.git
