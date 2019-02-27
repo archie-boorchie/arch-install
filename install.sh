@@ -76,6 +76,8 @@ python2 # A high-level scripting language
 python # Next generation of the python high-level scripting language
 python-matplotlib # A python plotting library, making publication quality plots
 python-numpy # Scientific tools for Python
+python-lxml # Python3 binding for the libxml2 and libxslt libraries
+python-beautifulsoup4 # A Python HTML/XML parser designed for quick turnaround projects like screen-scraping
 nmap # Utility for network discovery and security auditing (needed for python-nmap)
 [AUR]python-nmap # A Python library which helps in using the nmap port scanner
 #
@@ -126,7 +128,7 @@ code # The Open Source build of Visual Studio Code (vscode) editor
 ### ebooks, pdf viewers etc
 mupdf # Lightweight PDF and XPS viewer
 # llpp # opengl accelerated pdf viewer based on mupdf
-evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))	
+evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
 bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
 zathura # Minimalistic document viewer
 zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
@@ -152,8 +154,8 @@ thunar-media-tags-plugin # Adds special features for media files to the Thunar F
 thunar-volman # Automatic management of removeable devices in Thunar
 #
 ### Printing
-cups  # the CUPS Printing System - daemon package
-print-manager # GUI-tool for managing print jobs and printers (KDE)
+cups # the CUPS Printing System - daemon package
+nss-mdns # glibc plugin providing host name resolution via mDNS
 #
 ### Launcher
 rofi # A window switcher, application launcher and dmenu replacement
@@ -228,6 +230,7 @@ stellarium # A stellarium with great graphics and a nice database of sky-objects
 # hunspell-gr # for greek spell-checking
 # 
 ### Data syncing
+rsync # A file transfer program to keep remote files in sync
 [AUR]dropbox # A free service that lets you bring your photos, docs, and videos anywhere and share them easily
 # [AUR]owncloud # A cloud server to store your files centrally on a hardware controlled by you
 #
@@ -259,7 +262,7 @@ mpv # A free, open source, and cross-platform media player
 imagemagick # An image viewing/manipulation program
 #
 ### Screen capturing
-maim #  Simple command line utility that takes screenshots (better than scrot)
+maim # Simple command line utility that takes screenshots (better than scrot)
 fbgrab # A framebuffer screenshot grabber
 [AUR]screenkey # Show the keys you type on the screen
 # add a screencast tool
@@ -317,7 +320,7 @@ rm -rf aurman/
 echo -ne "\naurman will now be used to manage the AUR packages\n"
 
 
-# Now we download packages from [AUR]. aurman  will be used to install the rest
+# Now we download packages from [AUR]. aurman will be used to install the rest
 # aur packages.
 
 # install aur packages
