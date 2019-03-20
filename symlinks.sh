@@ -40,6 +40,7 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     ranger
     rofi
     termite
+    zathura
     )
     
     echo -ne "\ncreating softlinks to /home/user/\n"
@@ -50,9 +51,9 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
         done
 
     echo -ne "\ncreating softlinks to /home/user/.config\n"
+    mkdir -p ~/.config
     for X in "${linkstoconfig[@]}"
         do
-            mkdir -p ~/.config
         	rm -rf ~/.config/$X
         	ln -sfn ~/dotfiles/$X ~/.config/$X
         done

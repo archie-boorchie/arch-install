@@ -136,9 +136,10 @@ zathura-dvju # DjVu support for Zathura
 zathura-cb # Adds comic book support to zathura
 #
 ### LaTeX
-texlive-most # includes TeX Live applications
-texlive-langgreek # fonts and support for typesetting Greek
-biber # a Unicode-capable BibTeX replacement for biblatex users
+texlive-most # TeX Live group
+# texlive-langextra # TeX Live - Bundle of all extra language support
+texlive-langgreek # TeX Live - Fonts and support for typesetting Greek
+biber # A Unicode-capable BibTeX replacement for biblatex users
 #
 ### Utils for markup languages
 pandoc # Conversion between markup formats
