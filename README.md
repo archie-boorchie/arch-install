@@ -122,3 +122,13 @@ where `full-path-to-shell` is the full path as given by `chsh -l`.
 If you now log out and log in again, you will be greeted by the new shell. 
 
 
+## Connecting Android devices
+
+After having installed the packages `android-file-transfer` and`android-udev`, uncomment `user_allow_other` in `/etc/fuse.conf` and mount your android device with
+
+```
+$ mkdir ~/my-device
+$ sudo aft-mtp-mount -o allow_other ~/my-device
+```
+
+so that a non-root user can access it.

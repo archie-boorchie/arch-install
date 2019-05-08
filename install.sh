@@ -126,20 +126,21 @@ gvim # Vi Improved, a highly configurable, improved version of the vi text edito
 code # The Open Source build of Visual Studio Code (vscode) editor
 #
 ### ebooks, pdf viewers etc
-mupdf # Lightweight PDF and XPS viewer
-# llpp # opengl accelerated pdf viewer based on mupdf
-evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
-bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
 zathura # Minimalistic document viewer
 zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
 zathura-dvju # DjVu support for Zathura
 zathura-cb # Adds comic book support to zathura
+zathura-ps # PostScript support
+evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
+bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
+mcomix # A user-friendly, customizable image viewer specifically designed to handle comic books
 #
 ### LaTeX
 texlive-most # TeX Live group
 # texlive-langextra # TeX Live - Bundle of all extra language support
 texlive-langgreek # TeX Live - Fonts and support for typesetting Greek
 biber # A Unicode-capable BibTeX replacement for biblatex users
+ctags # needed for vimtex
 #
 ### Utils for markup languages
 pandoc # Conversion between markup formats
@@ -234,6 +235,10 @@ stellarium # A stellarium with great graphics and a nice database of sky-objects
 rsync # A file transfer program to keep remote files in sync
 [AUR]dropbox # A free service that lets you bring your photos, docs, and videos anywhere and share them easily
 # [AUR]owncloud # A cloud server to store your files centrally on a hardware controlled by you
+# 
+### Android devices
+android-file-transfer # Android MTP client with minimalistic UI
+android-udev # Udev rules to connect Android devices to your linux box
 #
 ### PDF utilities
 [AUR]pdftk-bin # Swiss army knife for PDFs. Built from binary executables available in Debian repositories

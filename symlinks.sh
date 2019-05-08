@@ -36,6 +36,7 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     linkstoconfig=(
     i3
     llpp.conf
+    mcomix
     qutebrowser
     ranger
     rofi
