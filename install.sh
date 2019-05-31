@@ -102,6 +102,7 @@ lolcat # a colourful alternative to cat
 ### Archive management
 atool # Script for managing file archives of various types
 unzip # For extracting and viewing files in .zip archives
+p7zip # Command-line file archiver with high compression ratio
 # 
 ### Display manager
 # I do not use a display manager
