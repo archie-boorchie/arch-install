@@ -74,6 +74,8 @@ xcompmgr # Composite Window-effects manager for X.org
 ### Python and python modules 
 python2 # A high-level scripting language
 python # Next generation of the python high-level scripting language
+ipython # An enhanced Interactive Python shell
+python-scipy # SciPy is open-source software for mathematics, science, and engineering
 python-matplotlib # A python plotting library, making publication quality plots
 python-numpy # Scientific tools for Python
 python-lxml # Python3 binding for the libxml2 and libxslt libraries
@@ -150,8 +152,9 @@ pandoc # Conversion between markup formats
 # console
 ranger # A simple, vim-like file manager
 # gui
+dolphin # KDE file manager
+dolphin-plugins # Extra Dolphin plugins
 thunar # Modern file manager for Xfce
-# make thunar functional
 thunar-archive-plugin # Create and extract archives in Thunar
 thunar-media-tags-plugin # Adds special features for media files to the Thunar File Manager
 thunar-volman # Automatic management of removeable devices in Thunar
@@ -264,6 +267,7 @@ virtualbox
 feh # Fast and light imlib2-based image viewer 
 mplayer # Media player for Linux 
 mpv # A free, open source, and cross-platform media player 
+mediainfo # Supplies technical and tag information about a video or audio file (CLI interface)
 #
 ### Toolkits for image etc convertions and so on 
 imagemagick # An image viewing/manipulation program
