@@ -62,14 +62,15 @@ audacity # A program that lets you manipulate digital audio waveforms
 termite # A simple VTE-based terminal
 tmux # A terminal multiplexer	
 zsh # A very advanced and programmable command interpreter (shell) for UNIX
-zsh-syntax-highlighting	# Fish shell like syntax highlighting for Zsh
 zsh-autosuggestions	# Fish-like autosuggestions for zsh
 zsh-completions	# Additional completion definitions for Zsh
 zsh-history-substring-search # ZSH port of Fish history search (up arrow)
 zsh-lovers # A collection of tips, tricks and examples for the Z shell
+zsh-syntax-highlighting	# Fish shell like syntax highlighting for Zsh
 #
 ### Composite manager
 xcompmgr # Composite Window-effects manager for X.org
+compton # X compositor that may fix tearing issues
 #
 ### Python and python modules 
 python2 # A high-level scripting language
@@ -80,8 +81,6 @@ python-matplotlib # A python plotting library, making publication quality plots
 python-numpy # Scientific tools for Python
 python-lxml # Python3 binding for the libxml2 and libxslt libraries
 python-beautifulsoup4 # A Python HTML/XML parser designed for quick turnaround projects like screen-scraping
-nmap # Utility for network discovery and security auditing (needed for python-nmap)
-[AUR]python-nmap # A Python library which helps in using the nmap port scanner
 #
 ### C compiler
 gcc # The GNU Compiler Collection - C and C++ frontends	
@@ -93,6 +92,7 @@ pkgfile # A pacman .files metadata explorer
 pkgstats # Submit a list of installed packages to the Arch Linux project
 #
 ### Core utilities
+acpi # Client for battery, power, and thermal readings
 tree # A directory listing program displaying a depth indented list of files
 fd # Simple, fast and user-friendly alternative to find
 mlocate # Merging locate/updatedb implementation
@@ -102,18 +102,16 @@ ntfs-3g # NTFS filesystem driver and utilities
 lolcat # a colourful alternative to cat 
 # 
 ### Archive management
-atool # Script for managing file archives of various types
-unzip # For extracting and viewing files in .zip archives
 p7zip # Command-line file archiver with high compression ratio
+unrar # The RAR uncompression program
+unzip # For extracting and viewing files in .zip archives
+zip # Compressor/archiver for creating and modifying zipfiles
 # 
 ### Display manager
 # I do not use a display manager
 # 
 ### Window manager
 i3 # Install the i3 group - i3gaps is the default
-# additionally, to save an i3 session we need
-perl-anyevent-i3
-perl-json-xs
 #
 ### Desctop notification deamon
 dunst # Customizable and lightweight notification-daemon
@@ -213,7 +211,6 @@ networkmanager-openvpn # NetworkManager VPN plugin for OpenVPN
 #
 ### Youtube utilities 
 minitube # A native YouTube client in Qt. Watch YouTube videos without Flash Player
-mps-youtube # Terminal based YouTube jukebox with playlist management
 youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
 youtube-viewer # Command line utility for viewing YouTube videos
 #
