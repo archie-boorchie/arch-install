@@ -135,6 +135,7 @@ zathura-ps # PostScript support
 evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
 bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
 mcomix # A user-friendly, customizable image viewer specifically designed to handle comic books
+[AUR]k2pdfopt # A tool that optimizes PDF files for viewing on mobile readers
 #
 ### LaTeX
 texlive-most # TeX Live group

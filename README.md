@@ -124,7 +124,7 @@ If you now log out and log in again, you will be greeted by the new shell.
 
 ## Connecting Android devices
 
-After having installed the packages `android-file-transfer` and`android-udev`, uncomment `user_allow_other` in `/etc/fuse.conf` and mount your android device with
+After having installed the packages `android-file-transfer` and `android-udev`, uncomment `user_allow_other` in `/etc/fuse.conf` and mount your android device with
 
 ```
 $ mkdir ~/my-device
