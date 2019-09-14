@@ -315,30 +315,23 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
 fi
 
 
-# Install aurman to help with the AUR package management
-# NOTE: now that aurman is discontinued, consider using another AUR helper, such
-# as pikaur or pakku.
-echo -ne "\nInstalling aurman to help with the AUR package management\n"
+# Install pikaur to help with the AUR package management
+echo -ne "\nInstalling pikaur to help with the AUR package management\n"
 cd ~
-git clone https://aur.archlinux.org/aurman.git
-cd aurman
+git clone https://aur.archlinux.org/pikaur.git
+cd pikaur
 makepkg -sic
 cd ~
-rm -rf aurman/
-
-echo -ne "\naurman will now be used to manage the AUR packages\n"
+rm -rf pikaur
 
 
-# Now we download packages from [AUR]. aurman will be used to install the rest
-# aur packages.
-
-# install aur packages
-echo -ne "\nInstalling aur packages with aurman\n"
+# pikaur will now be used to manage the AUR packages
+echo -ne "\nInstalling aur packages with pikaur\n"
 for X in "${packages[@]}"
 do
     if [[ $X == *"[AUR]"* ]]; then 
     Y="$(echo "$X" | sed 's/\[AUR\]//')"
-    aurman -S --needed "$Y"
+    pikaur -S --noconfirm --needed "$Y"
     fi
 done
 
@@ -352,12 +345,12 @@ sudo pacman -Rns $(pacman -Qtdq)
 
 
 # Final step: manage dotfiles, create symlinks for them
-read -p "Do you want to clone the dotfiles repository from GitHub (Y/n)?  " yn
+read -p "Do you want to clone the archie-boorchie dotfiles repository from GitHub (Y/n)?  " yn
 yn=${yn:-yes}
 if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     # check if dotfiles directory exists in ~
     if [ -d "dotfiles" ]; then
-        echo -ne "\nError: a dotfiles directory already exists!\n"
+        echo -ne "\nError: a dotfiles directory already exists! Aborting...\n"
     else
         git clone https://github.com/archie-boorchie/dotfiles
     fi
