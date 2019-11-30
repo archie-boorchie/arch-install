@@ -40,7 +40,12 @@ mount /dev/sda2 /mnt/boot
 mount /dev/sda4 /mnt/home
 ```
 
-Choose a couple close mirrors and `pacstrap` only `base` to save time.
+Choose a couple close mirrors and `pacstrap`:
+
+``` bash
+pacstrap /mnt base linux linux-firmware
+---
+
 After change root, install `reflector`, generate `mirrorlist` by 
 
 ``` bash

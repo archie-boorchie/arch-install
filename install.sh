@@ -22,11 +22,19 @@
 
 packages=(
 #
+### Base packages and kernels
+base # Minimal package set to define a basic Arch Linux installation
+base-devel # Group with basic developer packages
+linux # The Linux kernel and modules
+linux-headers #	Header files and scripts for building modules for Linux kernel
+linux-lts # The Linux-lts kernel and modules
+linux-lts-headers # Header files and scripts for building modules for Linux-lts kernel
+#
 ### X.org 
 xorg # Install the X package group
 xorg-xinit # X.Org initialisation program
 xorg-xinput # Small commandline tool to configure devices
-xf86-input-synaptics # Synaptics driver for notebook touchpads
+xf86-input-libinput # Generic input driver for the X.Org server based on libinput
 xdotool # Command-line X11 automation tool
 # you may also need an extra driver for intel
 #xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
@@ -128,14 +136,15 @@ code # The Open Source build of Visual Studio Code (vscode) editor
 #
 ### ebooks, pdf viewers etc
 zathura # Minimalistic document viewer
-zathura-pdf-mupdf # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
-zathura-dvju # DjVu support for Zathura
 zathura-cb # Adds comic book support to zathura
+zathura-dvju # DjVu support for Zathura
+zathura-pdf-poppler # Adds pdf support to zathura by using the poppler engine
 zathura-ps # PostScript support
 evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
 bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
 mcomix # A user-friendly, customizable image viewer specifically designed to handle comic books
 [AUR]k2pdfopt # A tool that optimizes PDF files for viewing on mobile readers
+fanficfare # A tool for downloading fanfiction to eBook formats
 #
 ### LaTeX
 texlive-most # TeX Live group
@@ -243,8 +252,8 @@ android-file-transfer # Android MTP client with minimalistic UI
 android-udev # Udev rules to connect Android devices to your linux box
 #
 ### PDF utilities
-[AUR]pdftk-bin # Swiss army knife for PDFs. Built from binary executables available in Debian repositories
-[AUR]crop-pdf # command line tool to crop PDF files
+pdftk # Command-line tool for working with PDFs
+[AUR]crop-pdf # Command line tool to crop PDF files
 diffpdf # Diffing pdf files visually or textually
 #
 ### ebook utilities
@@ -259,7 +268,9 @@ remind # A sophisticated calendar and alarm program
 numix-circle
 #
 ### Virtual machines
-virtualbox
+# virtualbox # Powerful x86 virtualization for enterprise as well as home use
+# virtualbox-modules-arch # Virtualbox host kernel modules for Arch Kernel
+# virtualbox-host-dkms # VirtualBox Host kernel modules sources
 #
 ### Media players
 feh # Fast and light imlib2-based image viewer 
@@ -359,6 +370,10 @@ fi
 echo -ne "\nCreating symlinks for the dotfiles\n"
 
 sh ~/arch-install/symlinks.sh
+
+echo -ne "\nEnabling services\n"
+
+sh ~/arch-install/services.sh
 
 echo -ne "\nSystem is now ready to use!\n"
 
