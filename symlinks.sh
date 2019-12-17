@@ -15,9 +15,10 @@ read -p "Type 'yes' to continue.  " yn
 if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     echo "Running the script symlinks.sh ..."
     
-    # dotfiles belonging to /home/user/
+    # dotfiles to /home/user/
     linkstohome=(
     aliases
+    asoundrc
     bash_profile
     bashrc
     elinks
@@ -32,7 +33,7 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     zshrc
     )
     
-    # dotfiles belonging to /home/user/.config
+    # dotfiles to /home/user/.config
     linkstoconfig=(
     i3
     llpp.conf

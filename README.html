@@ -1,90 +1,197 @@
 <!DOCTYPE html>
+<!--
+==============================================================================
+           "GitHub HTML5 Pandoc Template" v2.1 — by Tristano Ajmone           
+==============================================================================
+Copyright © Tristano Ajmone, 2017, MIT License (MIT). Project's home:
+
+- https://github.com/tajmone/pandoc-goodies
+
+The CSS in this template reuses source code taken from the following projects:
+
+- GitHub Markdown CSS: Copyright © Sindre Sorhus, MIT License (MIT):
+  https://github.com/sindresorhus/github-markdown-css
+
+- Primer CSS: Copyright © 2016-2017 GitHub Inc., MIT License (MIT):
+  http://primercss.io/
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The MIT License 
+
+Copyright (c) Tristano Ajmone, 2017 (github.com/tajmone/pandoc-goodies)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) 2017 GitHub Inc.
+
+"GitHub Pandoc HTML5 Template" is Copyright (c) Tristano Ajmone, 2017, released
+under the MIT License (MIT); it contains readaptations of substantial portions
+of the following third party softwares:
+
+(1) "GitHub Markdown CSS", Copyright (c) Sindre Sorhus, MIT License (MIT).
+(2) "Primer CSS", Copyright (c) 2016 GitHub Inc., MIT License (MIT).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+==============================================================================-->
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
   <style type="text/css">
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
+@charset "UTF-8";.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:16px;line-height:1.5;word-wrap:break-word;box-sizing:border-box;min-width:200px;max-width:980px;margin:0 auto;padding:45px}.markdown-body a{color:#0366d6;background-color:transparent;text-decoration:none;-webkit-text-decoration-skip:objects}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body a:hover{text-decoration:underline}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body strong{font-weight:600}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1{font-size:2em;margin:.67em 0;padding-bottom:.3em;border-bottom:1px solid #eaecef}.markdown-body h2{padding-bottom:.3em;font-size:1.5em;border-bottom:1px solid #eaecef}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body img{border-style:none}.markdown-body svg:not(:root){overflow:hidden}.markdown-body hr{box-sizing:content-box;height:.25em;margin:24px 0;padding:0;overflow:hidden;background-color:#e1e4e8;border:0}.markdown-body hr::before{display:table;content:""}.markdown-body hr::after{display:table;clear:both;content:""}.markdown-body input{margin:0;overflow:visible;font:inherit;font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body blockquote{margin:0}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dd{margin-left:0}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body code{font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace}.markdown-body pre{font:12px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;word-wrap:normal}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body table{display:block;width:100%;overflow:auto;border-spacing:0;border-collapse:collapse}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body code{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body code::after,.markdown-body code::before{letter-spacing:-.2em;content:" "}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:0 0;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code::after,.markdown-body pre code::before{content:normal}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body kbd{box-shadow:inset 0 -1px 0 #959da5;display:inline-block;padding:3px 5px;font:11px/10px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;color:#444d56;vertical-align:middle;background-color:#fcfcfc;border:1px solid #c6cbd1;border-bottom-color:#959da5;border-radius:3px;box-shadow:inset 0 -1px 0 #959da5}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.markdown-body::before{display:table;content:""}.markdown-body::after{display:table;clear:both;content:""}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.Alert,.Error,.Note,.Success,.Warning{padding:11px;margin-bottom:24px;border-style:solid;border-width:1px;border-radius:4px}.Alert p,.Error p,.Note p,.Success p,.Warning p{margin-top:0}.Alert p:last-child,.Error p:last-child,.Note p:last-child,.Success p:last-child,.Warning p:last-child{margin-bottom:0}.Alert{color:#246;background-color:#e2eef9;border-color:#bac6d3}.Warning{color:#4c4a42;background-color:#fff9ea;border-color:#dfd8c2}.Error{color:#911;background-color:#fcdede;border-color:#d2b2b2}.Success{color:#22662c;background-color:#e2f9e5;border-color:#bad3be}.Note{color:#2f363d;background-color:#f6f8fa;border-color:#d5d8da}.Alert h1,.Alert h2,.Alert h3,.Alert h4,.Alert h5,.Alert h6{color:#246;margin-bottom:0}.Warning h1,.Warning h2,.Warning h3,.Warning h4,.Warning h5,.Warning h6{color:#4c4a42;margin-bottom:0}.Error h1,.Error h2,.Error h3,.Error h4,.Error h5,.Error h6{color:#911;margin-bottom:0}.Success h1,.Success h2,.Success h3,.Success h4,.Success h5,.Success h6{color:#22662c;margin-bottom:0}.Note h1,.Note h2,.Note h3,.Note h4,.Note h5,.Note h6{color:#2f363d;margin-bottom:0}.Alert h1:first-child,.Alert h2:first-child,.Alert h3:first-child,.Alert h4:first-child,.Alert h5:first-child,.Alert h6:first-child,.Error h1:first-child,.Error h2:first-child,.Error h3:first-child,.Error h4:first-child,.Error h5:first-child,.Error h6:first-child,.Note h1:first-child,.Note h2:first-child,.Note h3:first-child,.Note h4:first-child,.Note h5:first-child,.Note h6:first-child,.Success h1:first-child,.Success h2:first-child,.Success h3:first-child,.Success h4:first-child,.Success h5:first-child,.Success h6:first-child,.Warning h1:first-child,.Warning h2:first-child,.Warning h3:first-child,.Warning h4:first-child,.Warning h5:first-child,.Warning h6:first-child{margin-top:0}h1.title,p.subtitle{text-align:center}h1.title.followed-by-subtitle{margin-bottom:0}p.subtitle{font-size:1.5em;font-weight:600;line-height:1.25;margin-top:0;margin-bottom:16px;padding-bottom:.3em}div.line-block{white-space:pre-line}
   </style>
-  <link href="data:text/css,%2F%2A%21%20normalize%2Ecss%20v2%2E1%2E3%20%7C%20MIT%20License%20%7C%20git%2Eio%2Fnormalize%20%2A%2F%0A%0A%2F%2A%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20%20HTML5%20display%20definitions%0A%20%20%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%20%2A%2F%0A%0A%2F%2A%2A%0A%20%2A%20Correct%20%60block%60%20display%20not%20defined%20in%20IE%208%2F9%2E%0A%20%2A%2F%0A%0Aarticle%2C%0Aaside%2C%0Adetails%2C%0Afigcaption%2C%0Afigure%2C%0Afooter%2C%0Aheader%2C%0Ahgroup%2C%0Amain%2C%0Anav%2C%0Asection%2C%0Asummary%20%7B%0A%20%20%20%20display%3A%20block%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Correct%20%60inline%2Dblock%60%20display%20not%20defined%20in%20IE%208%2F9%2E%0A%20%2A%2F%0A%0Aaudio%2C%0Acanvas%2C%0Avideo%20%7B%0A%20%20%20%20display%3A%20inline%2Dblock%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Prevent%20modern%20browsers%20from%20displaying%20%60audio%60%20without%20controls%2E%0A%20%2A%20Remove%20excess%20height%20in%20iOS%205%20devices%2E%0A%20%2A%2F%0A%0Aaudio%3Anot%28%5Bcontrols%5D%29%20%7B%0A%20%20%20%20display%3A%20none%3B%0A%20%20%20%20height%3A%200%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20%60%5Bhidden%5D%60%20styling%20not%20present%20in%20IE%208%2F9%2E%0A%20%2A%20Hide%20the%20%60template%60%20element%20in%20IE%2C%20Safari%2C%20and%20Firefox%20%3C%2022%2E%0A%20%2A%2F%0A%0A%5Bhidden%5D%2C%0Atemplate%20%7B%0A%20%20%20%20display%3A%20none%3B%0A%7D%0A%0A%2F%2A%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20%20Base%0A%20%20%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%20%2A%2F%0A%0A%2F%2A%2A%0A%20%2A%201%2E%20Set%20default%20font%20family%20to%20sans%2Dserif%2E%0A%20%2A%202%2E%20Prevent%20iOS%20text%20size%20adjust%20after%20orientation%20change%2C%20without%20disabling%0A%20%2A%20%20%20%20user%20zoom%2E%0A%20%2A%2F%0A%0Ahtml%20%7B%0A%20%20%20%20font%2Dfamily%3A%20sans%2Dserif%3B%20%2F%2A%201%20%2A%2F%0A%20%20%20%20%2Dms%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%20%2F%2A%202%20%2A%2F%0A%20%20%20%20%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%20%2F%2A%202%20%2A%2F%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Remove%20default%20margin%2E%0A%20%2A%2F%0A%0Abody%20%7B%0A%20%20%20%20margin%3A%200%3B%0A%7D%0A%0A%2F%2A%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20%20Links%0A%20%20%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%20%2A%2F%0A%0A%2F%2A%2A%0A%20%2A%20Remove%20the%20gray%20background%20color%20from%20active%20links%20in%20IE%2010%2E%0A%20%2A%2F%0A%0Aa%20%7B%0A%20%20%20%20background%3A%20transparent%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20%60outline%60%20inconsistency%20between%20Chrome%20and%20other%20browsers%2E%0A%20%2A%2F%0A%0Aa%3Afocus%20%7B%0A%20%20%20%20outline%3A%20thin%20dotted%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Improve%20readability%20when%20focused%20and%20also%20mouse%20hovered%20in%20all%20browsers%2E%0A%20%2A%2F%0A%0Aa%3Aactive%2C%0Aa%3Ahover%20%7B%0A%20%20%20%20outline%3A%200%3B%0A%7D%0A%0A%2F%2A%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20%20Typography%0A%20%20%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%20%2A%2F%0A%0A%2F%2A%2A%0A%20%2A%20Address%20variable%20%60h1%60%20font%2Dsize%20and%20margin%20within%20%60section%60%20and%20%60article%60%0A%20%2A%20contexts%20in%20Firefox%204%2B%2C%20Safari%205%2C%20and%20Chrome%2E%0A%20%2A%2F%0A%0Ah1%20%7B%0A%20%20%20%20font%2Dsize%3A%202em%3B%0A%20%20%20%20margin%3A%200%2E67em%200%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20styling%20not%20present%20in%20IE%208%2F9%2C%20Safari%205%2C%20and%20Chrome%2E%0A%20%2A%2F%0A%0Aabbr%5Btitle%5D%20%7B%0A%20%20%20%20border%2Dbottom%3A%201px%20dotted%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20style%20set%20to%20%60bolder%60%20in%20Firefox%204%2B%2C%20Safari%205%2C%20and%20Chrome%2E%0A%20%2A%2F%0A%0Ab%2C%0Astrong%20%7B%0A%20%20%20%20font%2Dweight%3A%20bold%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20styling%20not%20present%20in%20Safari%205%20and%20Chrome%2E%0A%20%2A%2F%0A%0Adfn%20%7B%0A%20%20%20%20font%2Dstyle%3A%20italic%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20differences%20between%20Firefox%20and%20other%20browsers%2E%0A%20%2A%2F%0A%0Ahr%20%7B%0A%20%20%20%20%2Dmoz%2Dbox%2Dsizing%3A%20content%2Dbox%3B%0A%20%20%20%20box%2Dsizing%3A%20content%2Dbox%3B%0A%20%20%20%20height%3A%200%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20styling%20not%20present%20in%20IE%208%2F9%2E%0A%20%2A%2F%0A%0Amark%20%7B%0A%20%20%20%20background%3A%20%23ff0%3B%0A%20%20%20%20color%3A%20%23000%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Correct%20font%20family%20set%20oddly%20in%20Safari%205%20and%20Chrome%2E%0A%20%2A%2F%0A%0Acode%2C%0Akbd%2C%0Apre%2C%0Asamp%20%7B%0A%20%20%20%20font%2Dfamily%3A%20monospace%2C%20serif%3B%0A%20%20%20%20font%2Dsize%3A%201em%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Improve%20readability%20of%20pre%2Dformatted%20text%20in%20all%20browsers%2E%0A%20%2A%2F%0A%0Apre%20%7B%0A%20%20%20%20white%2Dspace%3A%20pre%2Dwrap%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Set%20consistent%20quote%20types%2E%0A%20%2A%2F%0A%0Aq%20%7B%0A%20%20%20%20quotes%3A%20%22%5C201C%22%20%22%5C201D%22%20%22%5C2018%22%20%22%5C2019%22%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20inconsistent%20and%20variable%20font%20size%20in%20all%20browsers%2E%0A%20%2A%2F%0A%0Asmall%20%7B%0A%20%20%20%20font%2Dsize%3A%2080%25%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Prevent%20%60sub%60%20and%20%60sup%60%20affecting%20%60line%2Dheight%60%20in%20all%20browsers%2E%0A%20%2A%2F%0A%0Asub%2C%0Asup%20%7B%0A%20%20%20%20font%2Dsize%3A%2075%25%3B%0A%20%20%20%20line%2Dheight%3A%200%3B%0A%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20vertical%2Dalign%3A%20baseline%3B%0A%7D%0A%0Asup%20%7B%0A%20%20%20%20top%3A%20%2D0%2E5em%3B%0A%7D%0A%0Asub%20%7B%0A%20%20%20%20bottom%3A%20%2D0%2E25em%3B%0A%7D%0A%0A%2F%2A%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20%20Embedded%20content%0A%20%20%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%20%2A%2F%0A%0A%2F%2A%2A%0A%20%2A%20Remove%20border%20when%20inside%20%60a%60%20element%20in%20IE%208%2F9%2E%0A%20%2A%2F%0A%0Aimg%20%7B%0A%20%20%20%20border%3A%200%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Correct%20overflow%20displayed%20oddly%20in%20IE%209%2E%0A%20%2A%2F%0A%0Asvg%3Anot%28%3Aroot%29%20%7B%0A%20%20%20%20overflow%3A%20hidden%3B%0A%7D%0A%0A%2F%2A%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20%20Figures%0A%20%20%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%20%2A%2F%0A%0A%2F%2A%2A%0A%20%2A%20Address%20margin%20not%20present%20in%20IE%208%2F9%20and%20Safari%205%2E%0A%20%2A%2F%0A%0Afigure%20%7B%0A%20%20%20%20margin%3A%200%3B%0A%7D%0A%0A%2F%2A%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20%20Forms%0A%20%20%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%20%2A%2F%0A%0A%2F%2A%2A%0A%20%2A%20Define%20consistent%20border%2C%20margin%2C%20and%20padding%2E%0A%20%2A%2F%0A%0Afieldset%20%7B%0A%20%20%20%20border%3A%201px%20solid%20%23c0c0c0%3B%0A%20%20%20%20margin%3A%200%202px%3B%0A%20%20%20%20padding%3A%200%2E35em%200%2E625em%200%2E75em%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%201%2E%20Correct%20%60color%60%20not%20being%20inherited%20in%20IE%208%2F9%2E%0A%20%2A%202%2E%20Remove%20padding%20so%20people%20aren%27t%20caught%20out%20if%20they%20zero%20out%20fieldsets%2E%0A%20%2A%2F%0A%0Alegend%20%7B%0A%20%20%20%20border%3A%200%3B%20%2F%2A%201%20%2A%2F%0A%20%20%20%20padding%3A%200%3B%20%2F%2A%202%20%2A%2F%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%201%2E%20Correct%20font%20family%20not%20being%20inherited%20in%20all%20browsers%2E%0A%20%2A%202%2E%20Correct%20font%20size%20not%20being%20inherited%20in%20all%20browsers%2E%0A%20%2A%203%2E%20Address%20margins%20set%20differently%20in%20Firefox%204%2B%2C%20Safari%205%2C%20and%20Chrome%2E%0A%20%2A%2F%0A%0Abutton%2C%0Ainput%2C%0Aselect%2C%0Atextarea%20%7B%0A%20%20%20%20font%2Dfamily%3A%20inherit%3B%20%2F%2A%201%20%2A%2F%0A%20%20%20%20font%2Dsize%3A%20100%25%3B%20%2F%2A%202%20%2A%2F%0A%20%20%20%20margin%3A%200%3B%20%2F%2A%203%20%2A%2F%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20Firefox%204%2B%20setting%20%60line%2Dheight%60%20on%20%60input%60%20using%20%60%21important%60%20in%0A%20%2A%20the%20UA%20stylesheet%2E%0A%20%2A%2F%0A%0Abutton%2C%0Ainput%20%7B%0A%20%20%20%20line%2Dheight%3A%20normal%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Address%20inconsistent%20%60text%2Dtransform%60%20inheritance%20for%20%60button%60%20and%20%60select%60%2E%0A%20%2A%20All%20other%20form%20control%20elements%20do%20not%20inherit%20%60text%2Dtransform%60%20values%2E%0A%20%2A%20Correct%20%60button%60%20style%20inheritance%20in%20Chrome%2C%20Safari%205%2B%2C%20and%20IE%208%2B%2E%0A%20%2A%20Correct%20%60select%60%20style%20inheritance%20in%20Firefox%204%2B%20and%20Opera%2E%0A%20%2A%2F%0A%0Abutton%2C%0Aselect%20%7B%0A%20%20%20%20text%2Dtransform%3A%20none%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%201%2E%20Avoid%20the%20WebKit%20bug%20in%20Android%204%2E0%2E%2A%20where%20%282%29%20destroys%20native%20%60audio%60%0A%20%2A%20%20%20%20and%20%60video%60%20controls%2E%0A%20%2A%202%2E%20Correct%20inability%20to%20style%20clickable%20%60input%60%20types%20in%20iOS%2E%0A%20%2A%203%2E%20Improve%20usability%20and%20consistency%20of%20cursor%20style%20between%20image%2Dtype%0A%20%2A%20%20%20%20%60input%60%20and%20others%2E%0A%20%2A%2F%0A%0Abutton%2C%0Ahtml%20input%5Btype%3D%22button%22%5D%2C%20%2F%2A%201%20%2A%2F%0Ainput%5Btype%3D%22reset%22%5D%2C%0Ainput%5Btype%3D%22submit%22%5D%20%7B%0A%20%20%20%20%2Dwebkit%2Dappearance%3A%20button%3B%20%2F%2A%202%20%2A%2F%0A%20%20%20%20cursor%3A%20pointer%3B%20%2F%2A%203%20%2A%2F%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Re%2Dset%20default%20cursor%20for%20disabled%20elements%2E%0A%20%2A%2F%0A%0Abutton%5Bdisabled%5D%2C%0Ahtml%20input%5Bdisabled%5D%20%7B%0A%20%20%20%20cursor%3A%20default%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%201%2E%20Address%20box%20sizing%20set%20to%20%60content%2Dbox%60%20in%20IE%208%2F9%2F10%2E%0A%20%2A%202%2E%20Remove%20excess%20padding%20in%20IE%208%2F9%2F10%2E%0A%20%2A%2F%0A%0Ainput%5Btype%3D%22checkbox%22%5D%2C%0Ainput%5Btype%3D%22radio%22%5D%20%7B%0A%20%20%20%20box%2Dsizing%3A%20border%2Dbox%3B%20%2F%2A%201%20%2A%2F%0A%20%20%20%20padding%3A%200%3B%20%2F%2A%202%20%2A%2F%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%201%2E%20Address%20%60appearance%60%20set%20to%20%60searchfield%60%20in%20Safari%205%20and%20Chrome%2E%0A%20%2A%202%2E%20Address%20%60box%2Dsizing%60%20set%20to%20%60border%2Dbox%60%20in%20Safari%205%20and%20Chrome%0A%20%2A%20%20%20%20%28include%20%60%2Dmoz%60%20to%20future%2Dproof%29%2E%0A%20%2A%2F%0A%0Ainput%5Btype%3D%22search%22%5D%20%7B%0A%20%20%20%20%2Dwebkit%2Dappearance%3A%20textfield%3B%20%2F%2A%201%20%2A%2F%0A%20%20%20%20%2Dmoz%2Dbox%2Dsizing%3A%20content%2Dbox%3B%0A%20%20%20%20%2Dwebkit%2Dbox%2Dsizing%3A%20content%2Dbox%3B%20%2F%2A%202%20%2A%2F%0A%20%20%20%20box%2Dsizing%3A%20content%2Dbox%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Remove%20inner%20padding%20and%20search%20cancel%20button%20in%20Safari%205%20and%20Chrome%0A%20%2A%20on%20OS%20X%2E%0A%20%2A%2F%0A%0Ainput%5Btype%3D%22search%22%5D%3A%3A%2Dwebkit%2Dsearch%2Dcancel%2Dbutton%2C%0Ainput%5Btype%3D%22search%22%5D%3A%3A%2Dwebkit%2Dsearch%2Ddecoration%20%7B%0A%20%20%20%20%2Dwebkit%2Dappearance%3A%20none%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%20Remove%20inner%20padding%20and%20border%20in%20Firefox%204%2B%2E%0A%20%2A%2F%0A%0Abutton%3A%3A%2Dmoz%2Dfocus%2Dinner%2C%0Ainput%3A%3A%2Dmoz%2Dfocus%2Dinner%20%7B%0A%20%20%20%20border%3A%200%3B%0A%20%20%20%20padding%3A%200%3B%0A%7D%0A%0A%2F%2A%2A%0A%20%2A%201%2E%20Remove%20default%20vertical%20scrollbar%20in%20IE%208%2F9%2E%0A%20%2A%202%2E%20Improve%20readability%20and%20alignment%20in%20all%20browsers%2E%0A%20%2A%2F%0A%0Atextarea%20%7B%0A%20%20%20%20overflow%3A%20auto%3B%20%2F%2A%201%20%2A%2F%0A%20%20%20%20vertical%2Dalign%3A%20top%3B%20%2F%2A%202%20%2A%2F%0A%7D%0A%0A%2F%2A%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%20%20%20Tables%0A%20%20%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%20%2A%2F%0A%0A%2F%2A%2A%0A%20%2A%20Remove%20most%20spacing%20between%20table%20cells%2E%0A%20%2A%2F%0A%0Atable%20%7B%0A%20%20%20%20border%2Dcollapse%3A%20collapse%3B%0A%20%20%20%20border%2Dspacing%3A%200%3B%0A%7D%0A%0A%2Ego%2Dtop%20%7B%0Aposition%3A%20fixed%3B%0Abottom%3A%202em%3B%0Aright%3A%202em%3B%0Atext%2Ddecoration%3A%20none%3B%0Abackground%2Dcolor%3A%20%23E0E0E0%3B%0Afont%2Dsize%3A%2012px%3B%0Apadding%3A%201em%3B%0Adisplay%3A%20inline%3B%0A%7D%0A%0A%2F%2A%20Github%20css%20%2A%2F%0A%0Ahtml%2Cbody%7B%20%20%20%20%20%20%20%20margin%3A%20auto%3B%0A%20%20%20%20padding%2Dright%3A%201em%3B%0A%20%20%20%20padding%2Dleft%3A%201em%3B%0A%20%20%20%20max%2Dwidth%3A%2044em%3B%20color%3Ablack%3B%7D%2A%3Anot%28%27%23mkdbuttons%27%29%7Bmargin%3A0%3Bpadding%3A0%7Dbody%7Bfont%3A13%2E34px%20helvetica%2Carial%2Cfreesans%2Cclean%2Csans%2Dserif%3B%2Dwebkit%2Dfont%2Dsmoothing%3Asubpixel%2Dantialiased%3Bline%2Dheight%3A1%2E4%3Bpadding%3A3px%3Bbackground%3A%23fff%3Bborder%2Dradius%3A3px%3B%2Dmoz%2Dborder%2Dradius%3A3px%3B%2Dwebkit%2Dborder%2Dradius%3A3px%7Dp%7Bmargin%3A1em%200%7Da%7Bcolor%3A%234183c4%3Btext%2Ddecoration%3Anone%7Dbody%7Bbackground%2Dcolor%3A%23fff%3Bpadding%3A30px%3Bmargin%3A15px%3Bfont%2Dsize%3A14px%3Bline%2Dheight%3A1%2E6%7Dbody%3E%2A%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%21important%7Dbody%3E%2A%3Alast%2Dchild%7Bmargin%2Dbottom%3A0%21important%7D%40media%20screen%7Bbody%7Bbox%2Dshadow%3A0%200%200%201px%20%23cacaca%2C0%200%200%204px%20%23eee%7D%7Dh1%2Ch2%2Ch3%2Ch4%2Ch5%2Ch6%7Bmargin%3A20px%200%2010px%3Bpadding%3A0%3Bfont%2Dweight%3Abold%3B%2Dwebkit%2Dfont%2Dsmoothing%3Asubpixel%2Dantialiased%3Bcursor%3Atext%7Dh1%7Bfont%2Dsize%3A28px%3Bcolor%3A%23000%7Dh2%7Bfont%2Dsize%3A24px%3Bborder%2Dbottom%3A1px%20solid%20%23ccc%3Bcolor%3A%23000%7Dh3%7Bfont%2Dsize%3A18px%3Bcolor%3A%23333%7Dh4%7Bfont%2Dsize%3A16px%3Bcolor%3A%23333%7Dh5%7Bfont%2Dsize%3A14px%3Bcolor%3A%23333%7Dh6%7Bcolor%3A%23777%3Bfont%2Dsize%3A14px%7Dp%2Cblockquote%2Ctable%2Cpre%7Bmargin%3A15px%200%7Dul%7Bpadding%2Dleft%3A30px%7Dol%7Bpadding%2Dleft%3A30px%7Dol%20li%20ul%3Afirst%2Dof%2Dtype%7Bmargin%2Dtop%3A0%7Dhr%7Bbackground%3Atransparent%20url%28data%3Aimage%2Fpng%3Bbase64%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI%2FPqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC%29%20repeat%2Dx%200%200%3Bborder%3A0%20none%3Bcolor%3A%23ccc%3Bheight%3A4px%3Bpadding%3A0%7Dbody%3Eh2%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Dbody%3Eh1%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Dbody%3Eh1%3Afirst%2Dchild%2Bh2%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Dbody%3Eh3%3Afirst%2Dchild%2Cbody%3Eh4%3Afirst%2Dchild%2Cbody%3Eh5%3Afirst%2Dchild%2Cbody%3Eh6%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Da%3Afirst%2Dchild%20h1%2Ca%3Afirst%2Dchild%20h2%2Ca%3Afirst%2Dchild%20h3%2Ca%3Afirst%2Dchild%20h4%2Ca%3Afirst%2Dchild%20h5%2Ca%3Afirst%2Dchild%20h6%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Dh1%2Bp%2Ch2%2Bp%2Ch3%2Bp%2Ch4%2Bp%2Ch5%2Bp%2Ch6%2Bp%2Cul%20li%3E%3Afirst%2Dchild%2Col%20li%3E%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%7Ddl%7Bpadding%3A0%7Ddl%20dt%7Bfont%2Dsize%3A14px%3Bfont%2Dweight%3Abold%3Bfont%2Dstyle%3Aitalic%3Bpadding%3A0%3Bmargin%3A15px%200%205px%7Ddl%20dt%3Afirst%2Dchild%7Bpadding%3A0%7Ddl%20dt%3E%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%7Ddl%20dt%3E%3Alast%2Dchild%7Bmargin%2Dbottom%3A0%7Ddl%20dd%7Bmargin%3A0%200%2015px%3Bpadding%3A0%2015px%7Ddl%20dd%3E%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%7Ddl%20dd%3E%3Alast%2Dchild%7Bmargin%2Dbottom%3A0%7Dblockquote%7Bborder%2Dleft%3A4px%20solid%20%23DDD%3Bpadding%3A0%2015px%3Bcolor%3A%23777%7Dblockquote%3E%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%7Dblockquote%3E%3Alast%2Dchild%7Bmargin%2Dbottom%3A0%7Dtable%7Bborder%2Dcollapse%3Acollapse%3Bborder%2Dspacing%3A0%3Bfont%2Dsize%3A100%25%3Bfont%3Ainherit%7Dtable%20th%7Bfont%2Dweight%3Abold%3Bborder%3A1px%20solid%20%23ccc%3Bpadding%3A6px%2013px%7Dtable%20td%7Bborder%3A1px%20solid%20%23ccc%3Bpadding%3A6px%2013px%7Dtable%20tr%7Bborder%2Dtop%3A1px%20solid%20%23ccc%3Bbackground%2Dcolor%3A%23fff%7Dtable%20tr%3Anth%2Dchild%282n%29%7Bbackground%2Dcolor%3A%23f8f8f8%7Dimg%7Bmax%2Dwidth%3A100%25%7Dcode%2Ctt%7Bmargin%3A0%202px%3Bpadding%3A0%205px%3Bwhite%2Dspace%3Anowrap%3Bborder%3A1px%20solid%20%23eaeaea%3Bbackground%2Dcolor%3A%23f8f8f8%3Bborder%2Dradius%3A3px%3Bfont%2Dfamily%3AConsolas%2C%27Liberation%20Mono%27%2CCourier%2Cmonospace%3Bfont%2Dsize%3A12px%3Bcolor%3A%23333%7Dpre%3Ecode%7Bmargin%3A0%3Bpadding%3A0%3Bwhite%2Dspace%3Apre%3Bborder%3A0%3Bbackground%3Atransparent%7D%2Ehighlight%20pre%7Bbackground%2Dcolor%3A%23f8f8f8%3Bborder%3A1px%20solid%20%23ccc%3Bfont%2Dsize%3A13px%3Bline%2Dheight%3A19px%3Boverflow%3Aauto%3Bpadding%3A6px%2010px%3Bborder%2Dradius%3A3px%7Dpre%7Bbackground%2Dcolor%3A%23f8f8f8%3Bborder%3A1px%20solid%20%23ccc%3Bfont%2Dsize%3A13px%3Bline%2Dheight%3A19px%3Boverflow%3Aauto%3Bpadding%3A6px%2010px%3Bborder%2Dradius%3A3px%7Dpre%20code%2Cpre%20tt%7Bbackground%2Dcolor%3Atransparent%3Bborder%3A0%7D%2Epoetry%20pre%7Bfont%2Dfamily%3AGeorgia%2CGaramond%2Cserif%21important%3Bfont%2Dstyle%3Aitalic%3Bfont%2Dsize%3A110%25%21important%3Bline%2Dheight%3A1%2E6em%3Bdisplay%3Ablock%3Bmargin%2Dleft%3A1em%7D%2Epoetry%20pre%20code%7Bfont%2Dfamily%3AGeorgia%2CGaramond%2Cserif%21important%3Bword%2Dbreak%3Abreak%2Dall%3Bword%2Dbreak%3Abreak%2Dword%3B%2Dwebkit%2Dhyphens%3Aauto%3B%2Dmoz%2Dhyphens%3Aauto%3Bhyphens%3Aauto%3Bwhite%2Dspace%3Apre%2Dwrap%7Dsup%2Csub%2Ca%2Efootnote%7Bfont%2Dsize%3A1%2E4ex%3Bheight%3A0%3Bline%2Dheight%3A1%3Bvertical%2Dalign%3Asuper%3Bposition%3Arelative%7Dsub%7Bvertical%2Dalign%3Asub%3Btop%3A%2D1px%7D%40media%20print%7Bbody%7Bbackground%3A%23fff%7Dimg%2Cpre%2Cblockquote%2Ctable%2Cfigure%7Bpage%2Dbreak%2Dinside%3Aavoid%7Dbody%7Bbackground%3A%23fff%3Bborder%3A0%7Dcode%7Bbackground%2Dcolor%3A%23fff%3Bcolor%3A%23333%21important%3Bpadding%3A0%20%2E2em%3Bborder%3A1px%20solid%20%23dedede%7Dpre%7Bbackground%3A%23fff%7Dpre%20code%7Bbackground%2Dcolor%3Awhite%21important%3Boverflow%3Avisible%7D%7D%40media%20screen%7Bbody%2Einverted%7Bcolor%3A%23eee%21important%3Bborder%2Dcolor%3A%23555%3Bbox%2Dshadow%3Anone%7D%2Einverted%20body%2C%2Einverted%20hr%20%2Einverted%20p%2C%2Einverted%20td%2C%2Einverted%20li%2C%2Einverted%20h1%2C%2Einverted%20h2%2C%2Einverted%20h3%2C%2Einverted%20h4%2C%2Einverted%20h5%2C%2Einverted%20h6%2C%2Einverted%20th%2C%2Einverted%20%2Emath%2C%2Einverted%20caption%2C%2Einverted%20dd%2C%2Einverted%20dt%2C%2Einverted%20blockquote%7Bcolor%3A%23eee%21important%3Bborder%2Dcolor%3A%23555%3Bbox%2Dshadow%3Anone%7D%2Einverted%20td%2C%2Einverted%20th%7Bbackground%3A%23333%7D%2Einverted%20h2%7Bborder%2Dcolor%3A%23555%7D%2Einverted%20hr%7Bborder%2Dcolor%3A%23777%3Bborder%2Dwidth%3A1px%21important%7D%3A%3Aselection%7Bbackground%3Argba%28157%2C193%2C200%2C0%2E5%29%7Dh1%3A%3Aselection%7Bbackground%2Dcolor%3Argba%2845%2C156%2C208%2C0%2E3%29%7Dh2%3A%3Aselection%7Bbackground%2Dcolor%3Argba%2890%2C182%2C224%2C0%2E3%29%7Dh3%3A%3Aselection%2Ch4%3A%3Aselection%2Ch5%3A%3Aselection%2Ch6%3A%3Aselection%2Cli%3A%3Aselection%2Col%3A%3Aselection%7Bbackground%2Dcolor%3Argba%28133%2C201%2C232%2C0%2E3%29%7Dcode%3A%3Aselection%7Bbackground%2Dcolor%3Argba%280%2C0%2C0%2C0%2E7%29%3Bcolor%3A%23eee%7Dcode%20span%3A%3Aselection%7Bbackground%2Dcolor%3Argba%280%2C0%2C0%2C0%2E7%29%21important%3Bcolor%3A%23eee%21important%7Da%3A%3Aselection%7Bbackground%2Dcolor%3Argba%28255%2C230%2C102%2C0%2E2%29%7D%2Einverted%20a%3A%3Aselection%7Bbackground%2Dcolor%3Argba%28255%2C230%2C102%2C0%2E6%29%7Dtd%3A%3Aselection%2Cth%3A%3Aselection%2Ccaption%3A%3Aselection%7Bbackground%2Dcolor%3Argba%28180%2C237%2C95%2C0%2E5%29%7D%2Einverted%7Bbackground%3A%230b2531%3Bbackground%3A%23252a2a%7D%2Einverted%20body%7Bbackground%3A%23252a2a%7D%2Einverted%20a%7Bcolor%3A%23acd1d5%7D%7D%2Ehighlight%20%2Ec%7Bcolor%3A%23998%3Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Eerr%7Bcolor%3A%23a61717%3Bbackground%2Dcolor%3A%23e3d2d2%7D%2Ehighlight%20%2Ek%2C%2Ehighlight%20%2Eo%7Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Ecm%7Bcolor%3A%23998%3Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Ecp%7Bcolor%3A%23999%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Ec1%7Bcolor%3A%23998%3Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Ecs%7Bcolor%3A%23999%3Bfont%2Dweight%3Abold%3Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Egd%7Bcolor%3A%23000%3Bbackground%2Dcolor%3A%23fdd%7D%2Ehighlight%20%2Egd%20%2Ex%7Bcolor%3A%23000%3Bbackground%2Dcolor%3A%23faa%7D%2Ehighlight%20%2Ege%7Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Egr%7Bcolor%3A%23a00%7D%2Ehighlight%20%2Egh%7Bcolor%3A%23999%7D%2Ehighlight%20%2Egi%7Bcolor%3A%23000%3Bbackground%2Dcolor%3A%23dfd%7D%2Ehighlight%20%2Egi%20%2Ex%7Bcolor%3A%23000%3Bbackground%2Dcolor%3A%23afa%7D%2Ehighlight%20%2Ego%7Bcolor%3A%23888%7D%2Ehighlight%20%2Egp%7Bcolor%3A%23555%7D%2Ehighlight%20%2Egs%7Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Egu%7Bcolor%3A%23800080%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Egt%7Bcolor%3A%23a00%7D%2Ehighlight%20%2Ekc%2C%2Ehighlight%20%2Ekd%2C%2Ehighlight%20%2Ekn%2C%2Ehighlight%20%2Ekp%2C%2Ehighlight%20%2Ekr%7Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Ekt%7Bcolor%3A%23458%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Em%7Bcolor%3A%23099%7D%2Ehighlight%20%2Es%7Bcolor%3A%23d14%7D%2Ehighlight%20%2Ena%7Bcolor%3A%23008080%7D%2Ehighlight%20%2Enb%7Bcolor%3A%230086b3%7D%2Ehighlight%20%2Enc%7Bcolor%3A%23458%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Eno%7Bcolor%3A%23008080%7D%2Ehighlight%20%2Eni%7Bcolor%3A%23800080%7D%2Ehighlight%20%2Ene%2C%2Ehighlight%20%2Enf%7Bcolor%3A%23900%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Enn%7Bcolor%3A%23555%7D%2Ehighlight%20%2Ent%7Bcolor%3A%23000080%7D%2Ehighlight%20%2Env%7Bcolor%3A%23008080%7D%2Ehighlight%20%2Eow%7Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Ew%7Bcolor%3A%23bbb%7D%2Ehighlight%20%2Emf%2C%2Ehighlight%20%2Emh%2C%2Ehighlight%20%2Emi%2C%2Ehighlight%20%2Emo%7Bcolor%3A%23099%7D%2Ehighlight%20%2Esb%2C%2Ehighlight%20%2Esc%2C%2Ehighlight%20%2Esd%2C%2Ehighlight%20%2Es2%2C%2Ehighlight%20%2Ese%2C%2Ehighlight%20%2Esh%2C%2Ehighlight%20%2Esi%2C%2Ehighlight%20%2Esx%7Bcolor%3A%23d14%7D%2Ehighlight%20%2Esr%7Bcolor%3A%23009926%7D%2Ehighlight%20%2Es1%7Bcolor%3A%23d14%7D%2Ehighlight%20%2Ess%7Bcolor%3A%23990073%7D%2Ehighlight%20%2Ebp%7Bcolor%3A%23999%7D%2Ehighlight%20%2Evc%2C%2Ehighlight%20%2Evg%2C%2Ehighlight%20%2Evi%7Bcolor%3A%23008080%7D%2Ehighlight%20%2Eil%7Bcolor%3A%23099%7D%2Ehighlight%20%2Egc%7Bcolor%3A%23999%3Bbackground%2Dcolor%3A%23eaf2f5%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Ek%2C%2Etype%2Dcsharp%20%2Ehighlight%20%2Ekt%7Bcolor%3A%2300F%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Enf%7Bcolor%3A%23000%3Bfont%2Dweight%3Anormal%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Enc%7Bcolor%3A%232b91af%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Enn%7Bcolor%3A%23000%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Es%2C%2Etype%2Dcsharp%20%2Ehighlight%20%2Esc%7Bcolor%3A%23a31515%7D%0A" rel="stylesheet">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-<h1 id="tips-for-an-archlinux-installation">Tips for an Archlinux installation</h1>
+<article class="markdown-body">
+<h1 id="tips-for-an-archlinux-installation">Tips for an <code>archlinux</code> installation</h1>
 <blockquote>
-<p>Here are some brief notes about a basic <code>archlinux</code> installation. These notes are to be read together with the installation guide, and they reflect my <em>personal</em> preferences.</p>
+<p>Here are some brief notes about a basic <code>archlinux</code> installation and the semi-automatised procedure I use after that to set up my system. These notes are to be read <em>together</em> with the <a href="https://wiki.archlinux.org/index.php/Installation_guide">installation guide</a> , and they reflect my <em>personal</em> preferences.</p>
 </blockquote>
 <h2 id="partitions">Partitions</h2>
+<p>For this notes I assume that we deal with an UEFI system.</p>
 <p>I create 4 partitions:</p>
-<ul>
-<li>root partition (about 25G),</li>
-<li>boot partition (200M),</li>
-<li>swap partition (about twice the ram), and</li>
+<ol type="1">
+<li>EFI partition (512M),<br />
+</li>
+<li>root partition (about 30G),<br />
+</li>
+<li>swap partition (about the same size as RAM),<br />
+</li>
 <li>home partition (rest of memory).</li>
-</ul>
-<blockquote>
-<p><strong>Caution!</strong> Use <code>primary</code> partition for 4th partition, not <code>extended</code> which is default in <code>fdisc</code>.</p>
-</blockquote>
-<p>After that, <code>format</code> and <code>mount</code> the partitions:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkswap</span> /dev/sda3
-<span class="kw">swapon</span> /dev/sda3
-<span class="kw">mkfs.ext4</span> /dev/sda1 
-<span class="kw">mkfs.ext4</span> /dev/sda2 
-<span class="kw">mkfs.ext4</span> /dev/sda4 
-<span class="kw">mount</span> /dev/sda1 /mnt
-<span class="kw">mkdir</span> /mnt/home
-<span class="kw">mkdir</span> /mnt/boot
-<span class="kw">mount</span> /dev/sda2 /mnt/boot
-<span class="kw">mount</span> /dev/sda4 /mnt/home</code></pre>
-<p>Choose a couple close mirrors and <code>pacstrap</code> only <code>base</code> to save time. After change root, install <code>reflector</code>, generate <code>mirrorlist</code> by</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">reflector</span> --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist</code></pre>
-<p>and install <code>base-devel</code>, <code>vim</code>, <code>git</code>, <code>networkmanager</code>, <code>grub</code>.</p>
-<p>Change <code>kernel</code> to <code>lts</code> (keep the linux <code>kernel</code> as a backup) and install headers:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">pacman</span> -S linux-headers linux-lts linux-lts-headers 
-<span class="kw">grub-mkconfig</span> -o /boot/grub/grub.cfg
-<span class="kw">reboot</span></code></pre>
-<h2 id="network-manager">Network manager</h2>
-<p>To avoid manually configurating networks after reboot, install <code>networkmanager</code>:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">pacman</span> -S networkmanager</code></pre>
-<p>and enable it:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">systemctl</span> enable NetworkManager</code></pre>
-<p>After reboot internet works out of the box.</p>
+</ol>
+<p>Remember to change the partition type of the EFI partition to “EFI” (type 1 in <code>fdisk</code>). After that, <code>format</code> and <code>mount</code> the partitions:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">mkswap</span> /dev/sda3</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">swapon</span> /dev/sda3</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="ex">mkfs.fat</span> -F32 /dev/sda1</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="ex">mkfs.ext4</span> /dev/sda2</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="ex">mkfs.ext4</span> /dev/sda4</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">mount</span> /dev/sda2 /mnt</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">mkdir</span> /mnt/<span class="dt">{home,efi}</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">mount</span> /dev/sda1 /mnt/efi</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">mount</span> /dev/sda4 /mnt/home</span></code></pre></div>
+<h2 id="installation">Installation</h2>
+<p>Choose a couple close mirrors and <code>pacstrap</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">pacstrap</span> /mnt base linux linux-firmware base-devel gvim git zsh networkmanager</span></code></pre></div>
+<p>While chrooted remember to enable <code>networkmanager</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">systemctl</span> enable NetworkManager</span></code></pre></div>
+<p>Follow the rest of the installation guide.</p>
+<h1 id="post-installation">Post Installation</h1>
 <h2 id="user-add">User add</h2>
 <p>Add a new user</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">useradd</span> -m -g wheel myname</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">useradd</span> -m -g wheel myname</span></code></pre></div>
 <p>and give him root privileges by running <code>visudo</code> and uncommenting wheel group (optionally pass the <code>NOPASSWD</code> option).</p>
 <h2 id="prettify-console">Prettify console</h2>
 <p>Install <code>terminus</code> fonts:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">pacman</span> -S terminus-font</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">pacman</span> -S terminus-font</span></code></pre></div>
 <p>To use <code>terminus</code> fonts in console do:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">echo</span> <span class="st">&quot;FONT=ter-114n&quot;</span> <span class="kw">&gt;&gt;</span> /etc/vconsole.conf</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">echo</span> <span class="st">&quot;FONT=ter-114n&quot;</span> <span class="op">&gt;&gt;</span> /etc/vconsole.conf</span></code></pre></div>
 <h2 id="changing-default-shell">Changing default shell</h2>
 <p><code>zsh</code> is a much more powerful shell than bash. To list all installed shells, run:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">chsh</span> -l</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a>$ <span class="fu">chsh</span> -l</span></code></pre></div>
 <p>and to set one as default for your user do:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">chsh</span> -s full-path-to-shell</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a>$ <span class="fu">chsh</span> -s full-path-to-shell</span></code></pre></div>
 <p>where <code>full-path-to-shell</code> is the full path as given by <code>chsh -l</code>.</p>
 <p>If you now log out and log in again, you will be greeted by the new shell.</p>
+<p>You may also wish to change <code>kernel</code> to <code>lts</code> (keep the linux <code>kernel</code> as a backup) and install headers:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">pacman</span> -S linux-headers linux-lts linux-lts-headers </span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="ex">grub-mkconfig</span> -o /boot/grub/grub.cfg</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="ex">reboot</span></span></code></pre></div>
+<h1 id="next-steps">Next steps</h1>
+<p>After the above, download the arch-install repository from github, run the script and have fun!</p>
+<h1 id="extra-tips">Extra tips</h1>
+<h2 id="connecting-android-devices">Connecting Android devices</h2>
+<p>After having installed the packages <code>android-file-transfer</code> and <code>android-udev</code>, uncomment <code>user_allow_other</code> in <code>/etc/fuse.conf</code> and mount your android device with</p>
+<pre><code>$ mkdir ~/my-device
+$ sudo aft-mtp-mount -o allow_other ~/my-device</code></pre>
+<p>so that a non-root user can access it.</p>
+<!-- Compile to html using `pandoc -f markdown -t html5 --template=GitHub.html5
+README.md -s -o README.html`, using the template from
+https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub.html5
+-->
+</article>
 </body>
 </html>

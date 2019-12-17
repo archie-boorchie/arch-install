@@ -20,6 +20,14 @@
 # the nomenclature [AUR]package-name, to distinguish the package and later
 # install it correctly. 
 
+
+# Create a log file
+log=~/logfile-install.txt
+touch $log
+printf "Log file for the script install.sh -- " > $log
+date >> $log
+
+
 packages=(
 #
 ### Base packages and kernels
@@ -36,8 +44,8 @@ xorg-xinit # X.Org initialisation program
 xorg-xinput # Small commandline tool to configure devices
 xf86-input-libinput # Generic input driver for the X.Org server based on libinput
 xdotool # Command-line X11 automation tool
-# you may also need an extra driver for intel
-#xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
+# also install a driver for intel processor (change for other processor)
+xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
 #
 ### Keyboard
 xcape # Configure modifier keys to act as other keys when pressed and released on their own	
@@ -99,7 +107,7 @@ pacman-contrib # Contributed scripts and tools for pacman systems
 pkgfile # A pacman .files metadata explorer
 pkgstats # Submit a list of installed packages to the Arch Linux project
 #
-### Core utilities
+### More utilities
 acpi # Client for battery, power, and thermal readings
 tree # A directory listing program displaying a depth indented list of files
 fd # Simple, fast and user-friendly alternative to find
@@ -121,29 +129,33 @@ zip # Compressor/archiver for creating and modifying zipfiles
 ### Window manager
 i3 # Install the i3 group - i3gaps is the default
 #
+### Status bar
+[AUR]polybar # A fast and easy-to-use status bar
+#
 ### Desctop notification deamon
 dunst # Customizable and lightweight notification-daemon
 # 
 ### Version control
 git # The fast distributed version control system
 #
-### Editors
-# console
-# main editor is vim - I use gvim package to get the +xterm_clipboard option for vim
+### Text editors
 gvim # Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
-# gui
 code # The Open Source build of Visual Studio Code (vscode) editor
 #
 ### ebooks, pdf viewers etc
 zathura # Minimalistic document viewer
 zathura-cb # Adds comic book support to zathura
-zathura-dvju # DjVu support for Zathura
+zathura-djvu # DjVu support for Zathura
 zathura-pdf-poppler # Adds pdf support to zathura by using the poppler engine
 zathura-ps # PostScript support
 evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
 bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
+pdfpc # pdf presentation console
+pdftk # Command-line tool for working with PDFs
+[AUR]crop-pdf # Command line tool to crop PDF files
+diffpdf # Diffing pdf files visually or textually
+calibre # Ebook management application
 mcomix # A user-friendly, customizable image viewer specifically designed to handle comic books
-[AUR]k2pdfopt # A tool that optimizes PDF files for viewing on mobile readers
 fanficfare # A tool for downloading fanfiction to eBook formats
 #
 ### LaTeX
@@ -156,10 +168,32 @@ ctags # needed for vimtex
 ### Utils for markup languages
 pandoc # Conversion between markup formats
 #
+### Spell checkers
+hunspell # Spell checker and morphological analyzer library and program
+hunspell-en_GB # GB English hunspell dictionaries
+hunspell-en_US # US English hunspell dictionaries
+hunspell-el # Greek hunspell dictionary
+#
+### Fonts
+adobe-source-code-pro-fonts # Monospaced font family for user interface and coding environments
+adobe-source-sans-pro-fonts # Sans serif font family for user interface environments
+adobe-source-serif-pro-fonts # Serif typeface for setting text. Designed to complement Source Sans Pro
+terminus-font # Monospace bitmap font (for X11 and console) 
+ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
+noto-fonts # Google Noto TTF fonts
+ttf-font-awesome # Iconic font designed for Bootstrap
+awesome-terminal-fonts # fonts/icons for powerlines
+[AUR]ttf-material-design-icons-git # Material Design Icons Web Font (I use the Arch symbol from this font)
+#
+### Icon themes
+[AUR]numix-circle-arc-icons-git # Install Numix and Numix Circle. Numix icons combined with the Arc folders
+adwaita-icon-theme # GNOME standard icons
+#
+### Office apps 
+libreoffice-fresh # with new program enhancements
+# 
 ### File managers
-# console
 ranger # A simple, vim-like file manager
-# gui
 dolphin # KDE file manager
 dolphin-plugins # Extra Dolphin plugins
 thunar # Modern file manager for Xfce
@@ -175,32 +209,16 @@ nss-mdns # glibc plugin providing host name resolution via mDNS
 rofi # A window switcher, application launcher and dmenu replacement
 dmenu # Generic menu for X
 #
-### Fonts
-adobe-source-code-pro-fonts # Monospaced font family for user interface and coding environments
-adobe-source-sans-pro-fonts # Sans serif font family for user interface environments
-adobe-source-serif-pro-fonts # Serif typeface for setting text. Designed to complement Source Sans Pro
-terminus-font # Monospace bitmap font (for X11 and console) 
-ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
-noto-fonts # Google Noto TTF fonts
-ttf-font-awesome # Iconic font designed for Bootstrap
-awesome-terminal-fonts # fonts/icons for powerlines
-[AUR]ttf-material-design-icons-git # Material Design Icons Web Font (I use the Arch symbol from this font)
-#
-### Icon themes
-adwaita-icon-theme # GNOME standard icons
-#
 ### Internet browsers
-# gui
 qutebrowser # A keyboard-driven, vim-like browser based on PyQt5
 firefox # Standalone web browser from mozilla.org
 flashplugin # flash plugin for firefox
-# console
 elinks # An advanced and well-established feature-rich text mode web browser
 w3m # Text-based Web browser as well as pager
 #
-### Tor 
+### Tor
 tor # Anonymizing overlay network
-arm # Terminal status monitor for Tor relays
+nyx # Command-line status monitor for tor
 [AUR]tor-browser # Tor Browser Bundle: anonymous browsing using Firefox and Tor (international PKGBUILD)
 #
 ### Network utilities 
@@ -212,9 +230,6 @@ curl # An URL retrieval utility and library
 wget # Network utility to retrieve files from the Web
 speedtest-cli # Command line interface for testing internet bandwidth using speedtest.net
 #
-### Torrent client
-transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
-#
 ### Vpn 
 openvpn # An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
 networkmanager-openvpn # NetworkManager VPN plugin for OpenVPN
@@ -224,10 +239,13 @@ minitube # A native YouTube client in Qt. Watch YouTube videos without Flash Pla
 youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
 youtube-viewer # Command line utility for viewing YouTube videos
 #
+### Torrent client
+transmission-gtk # Fast, easy, and free BitTorrent client (GTK+ GUI)
+#
 ### Irc client 
 irssi # Modular text mode IRC client with Perl scripting
 #
-### Science 
+### Scientific software 
 calc # Arbitrary precision console calculator
 stellarium # A stellarium with great graphics and a nice database of sky-objects
 # celestia # Real-time space simulation
@@ -236,12 +254,6 @@ stellarium # A stellarium with great graphics and a nice database of sky-objects
 # marble # Desktop Globe
 ## add more map tools and meteorology tools
 #
-### Office apps 
-# libreoffice-fresh # with new program enhancements
-# hunspell # for spell-checking
-# hunspell-en # for english spell-checking
-# hunspell-gr # for greek spell-checking
-# 
 ### Data syncing
 rsync # A file transfer program to keep remote files in sync
 [AUR]dropbox # A free service that lets you bring your photos, docs, and videos anywhere and share them easily
@@ -251,45 +263,28 @@ rsync # A file transfer program to keep remote files in sync
 android-file-transfer # Android MTP client with minimalistic UI
 android-udev # Udev rules to connect Android devices to your linux box
 #
-### PDF utilities
-pdftk # Command-line tool for working with PDFs
-[AUR]crop-pdf # Command line tool to crop PDF files
-diffpdf # Diffing pdf files visually or textually
-#
-### ebook utilities
-[AUR]epubcheck # A tool to validate epub files
-# calibre # Ebook management application
-#
 ### Time management
 calcurse # A text-based personal organizer
 remind # A sophisticated calendar and alarm program
-#
-### Icons
-numix-circle
 #
 ### Virtual machines
 # virtualbox # Powerful x86 virtualization for enterprise as well as home use
 # virtualbox-modules-arch # Virtualbox host kernel modules for Arch Kernel
 # virtualbox-host-dkms # VirtualBox Host kernel modules sources
 #
-### Media players
-feh # Fast and light imlib2-based image viewer 
-mplayer # Media player for Linux 
-mpv # A free, open source, and cross-platform media player 
-mediainfo # Supplies technical and tag information about a video or audio file (CLI interface)
-#
-### Toolkits for image etc convertions and so on 
+### Media players and tools
+feh # Fast and light imlib2-based image viewer
 imagemagick # An image viewing/manipulation program
+mpv # A free, open source, and cross-platform media player
+mplayer # Media player for Linux
+vlc # Multi-platform MPEG, VCD/DVD, and DivX player
+mediainfo # Supplies technical and tag information about a video or audio file (CLI interface)
 #
 ### Screen capturing
 maim # Simple command line utility that takes screenshots (better than scrot)
 fbgrab # A framebuffer screenshot grabber
 [AUR]screenkey # Show the keys you type on the screen
 # add a screencast tool
-#
-### Presentation, multiscreen etc
-pdfpc # pdf presentation console
-mons # for easy multiscreen management
 #
 ### For fun
 fortune-mod
@@ -302,16 +297,24 @@ cmatrix
 #
 )
 
-# update and synchronise pacman
-echo -ne "\nSynchronising pacman\n"
-sudo pacman -Syy
+
+# Use reflector to optimise mirrorlist
+read -p "Would you like to use reflector to optimise pacman's mirrorlist (Y/n)?  " yn
+yn=${yn:-yes}
+if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
+    sudo pacman -S reflector --noconfirm --needed
+    sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    echo -ne "\nRefreshing package lists\n"
+    sudo pacman -Syyu
+fi
+
 
 # install official repository packages
 echo -ne "\nInstalling packages from official repositories\n"
 for X in "${packages[@]}"
 do
     if [[ $X != *"[AUR]"* ]]; then
-	sudo pacman -S --noconfirm --needed $X
+	sudo pacman -S --noconfirm --needed $X >> $log
     fi
 done
 
@@ -319,21 +322,25 @@ echo -ne "\nOfficial repository packages are ready\n"
 
 
 # Create a GPG key
-read -p "Generate a GPG key before installing AUR packages (Y/n)?  " yn
-yn=${yn:-yes}
+read -p "Generate a GPG key (y/N)?  " yn
+yn=${yn:-no}
 if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     gpg --full-gen-key
 fi
 
 
 # Install pikaur to help with the AUR package management
-echo -ne "\nInstalling pikaur to help with the AUR package management\n"
-cd ~
-git clone https://aur.archlinux.org/pikaur.git
-cd pikaur
-makepkg -sic
-cd ~
-rm -rf pikaur
+if pacman -Qs pikaur > /dev/null ; then
+    echo -ne "\npikaur is up to date"
+else
+    echo -ne "\nInstalling pikaur to help with the AUR package management\n"
+    cd ~
+    git clone https://aur.archlinux.org/pikaur.git
+    cd pikaur
+    makepkg -sic >> $log
+    cd ~
+    rm -rf pikaur
+fi
 
 
 # pikaur will now be used to manage the AUR packages
@@ -342,17 +349,17 @@ for X in "${packages[@]}"
 do
     if [[ $X == *"[AUR]"* ]]; then 
     Y="$(echo "$X" | sed 's/\[AUR\]//')"
-    pikaur -S --noconfirm --needed "$Y"
+    pikaur -S --noconfirm --needed "$Y" >> $log
     fi
 done
 
-echo -ne "\nAUR packages are ready\n"
+echo -ne "\nAUR packages are installed\n"
 
 
 # Cleaning orphans
 echo -ne "Cleaning orphan packages from system.
 Please check if you wish to keep some of the packages!\n\n"
-sudo pacman -Rns $(pacman -Qtdq)
+sudo pacman -Rns $(pacman -Qtdq) >> $log
 
 
 # Final step: manage dotfiles, create symlinks for them
@@ -371,10 +378,13 @@ echo -ne "\nCreating symlinks for the dotfiles\n"
 
 sh ~/arch-install/symlinks.sh
 
-echo -ne "\nEnabling services\n"
 
-sh ~/arch-install/services.sh
+# echo -ne "\nEnabling services\n"
+#
+# sh ~/arch-install/services.sh
 
 echo -ne "\nSystem is now ready to use!\n"
+echo -ne "The output of this script can be found at ~/logfile-install.txt.\n"
+echo -ne "Please check the file for errors!\n"
 
 echo -ne "\nExiting script install.sh\n"
