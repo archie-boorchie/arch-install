@@ -125,7 +125,11 @@ $ mkdir ~/my-device
 $ sudo aft-mtp-mount -o allow_other ~/my-device
 ```
 
-so that a non-root user can access it.
+Unmount the device with
+
+```
+$ sudo fusermount -u ~/my-device
+```
 
 <!-- Compile to html using `pandoc -f markdown -t html5 --template=GitHub.html5
 README.md -s -o README.html`, using the template from

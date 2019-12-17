@@ -187,7 +187,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>After having installed the packages <code>android-file-transfer</code> and <code>android-udev</code>, uncomment <code>user_allow_other</code> in <code>/etc/fuse.conf</code> and mount your android device with</p>
 <pre><code>$ mkdir ~/my-device
 $ sudo aft-mtp-mount -o allow_other ~/my-device</code></pre>
-<p>so that a non-root user can access it.</p>
+<p>Unmount the device with</p>
+<pre><code>$ sudo fusermount -u ~/my-device</code></pre>
 <!-- Compile to html using `pandoc -f markdown -t html5 --template=GitHub.html5
 README.md -s -o README.html`, using the template from
 https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub.html5
