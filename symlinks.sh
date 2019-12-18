@@ -9,9 +9,9 @@
 # is done automatically by this script.
 
 # Since this script is quite dangerous, we ask user for confirmation.
-echo -ne "\nWARNING! This script may be harmfull for your system.\nDo you want to continue?\n\n\n"
-read -p "Type 'yes' to continue.  " yn
-
+echo -ne "\nWARNING! This script may be harmfull for your system.\n"
+read -p "Do you wish to continue (y/N)?  " yn
+yn=${yn:-no}
 if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     echo "Running the script symlinks.sh ..."
     
@@ -35,6 +35,7 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     
     # dotfiles to /home/user/.config
     linkstoconfig=(
+    dunst
     i3
     llpp.conf
     mcomix

@@ -374,7 +374,7 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     fi
 fi
 
-echo -ne "\nCreating symlinks for the dotfiles\n"
+echo -ne "\nStarting script symlinks.sh\n"
 
 sh ~/arch-install/symlinks.sh
 
