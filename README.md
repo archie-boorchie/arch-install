@@ -18,8 +18,8 @@ I create 4 partitions:
 3.  swap partition (about the same size as RAM),  
 4.  home partition (rest of memory).
 
-Remember to change the partition type of the EFI partition to "EFI" (type 1 in
-`fdisk`). After that, `format` and `mount` the partitions:
+Remember to change the partition type of the EFI partition to "EFI". After
+that, `format` and `mount` the partitions:
 
 ``` bash
 mkswap /dev/sda3
@@ -39,8 +39,11 @@ mount /dev/sda4 /mnt/home
 Choose a couple close mirrors and `pacstrap`:
 
 ``` bash
-pacstrap /mnt base linux linux-firmware base-devel gvim git zsh networkmanager
+pacstrap /mnt base linux linux-firmware base-devel gvim git zsh networkmanager grub efibootmgr intel-ucode
 ```
+
+I pass `grub` and related packages in `pacstrap` step to avoid extra `pacman`
+commands latter.
 
 While chrooted remember to enable `networkmanager`:
 
@@ -111,14 +114,19 @@ reboot
 
 # Next steps
 
-After the above, download the arch-install repository from github, run the script and have fun!
+After the above, download the arch-install repository from github, run the
+script and have fun!
+
+Remember to add trim support if you have a SSD drive!
 
 
 # Extra tips
 
 ## Connecting Android devices
 
-After having installed the packages `android-file-transfer` and `android-udev`, uncomment `user_allow_other` in `/etc/fuse.conf` and mount your android device with
+After having installed the packages `android-file-transfer` and `android-udev`,
+uncomment `user_allow_other` in `/etc/fuse.conf` and mount your android device
+with
 
 ```
 $ mkdir ~/my-device

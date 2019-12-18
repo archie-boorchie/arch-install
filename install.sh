@@ -47,6 +47,9 @@ xdotool # Command-line X11 automation tool
 # also install a driver for intel processor (change for other processor)
 xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
 #
+### CPU governor
+cpupower # Linux kernel tool to examine and tune power saving related features of your processor
+#
 ### Keyboard
 xcape # Configure modifier keys to act as other keys when pressed and released on their own	
 #

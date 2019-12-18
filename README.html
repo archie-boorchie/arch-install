@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
 <li>home partition (rest of memory).</li>
 </ol>
-<p>Remember to change the partition type of the EFI partition to “EFI” (type 1 in <code>fdisk</code>). After that, <code>format</code> and <code>mount</code> the partitions:</p>
+<p>Remember to change the partition type of the EFI partition to “EFI”. After that, <code>format</code> and <code>mount</code> the partitions:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">mkswap</span> /dev/sda3</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="ex">swapon</span> /dev/sda3</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="ex">mkfs.fat</span> -F32 /dev/sda1</span>
@@ -155,7 +155,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-9"><a href="#cb1-9"></a><span class="fu">mount</span> /dev/sda4 /mnt/home</span></code></pre></div>
 <h2 id="installation">Installation</h2>
 <p>Choose a couple close mirrors and <code>pacstrap</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">pacstrap</span> /mnt base linux linux-firmware base-devel gvim git zsh networkmanager</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">pacstrap</span> /mnt base linux linux-firmware base-devel gvim git zsh networkmanager grub efibootmgr intel-ucode</span></code></pre></div>
+<p>I pass <code>grub</code> and related packages in <code>pacstrap</code> step to avoid extra <code>pacman</code> commands latter.</p>
 <p>While chrooted remember to enable <code>networkmanager</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">systemctl</span> enable NetworkManager</span></code></pre></div>
 <p>Follow the rest of the installation guide.</p>
@@ -182,6 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-3"><a href="#cb9-3"></a><span class="ex">reboot</span></span></code></pre></div>
 <h1 id="next-steps">Next steps</h1>
 <p>After the above, download the arch-install repository from github, run the script and have fun!</p>
+<p>Remember to add trim support if you have a SSD drive!</p>
 <h1 id="extra-tips">Extra tips</h1>
 <h2 id="connecting-android-devices">Connecting Android devices</h2>
 <p>After having installed the packages <code>android-file-transfer</code> and <code>android-udev</code>, uncomment <code>user_allow_other</code> in <code>/etc/fuse.conf</code> and mount your android device with</p>
