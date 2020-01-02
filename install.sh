@@ -73,6 +73,7 @@ xorg-xbacklight # RandR-based backlight control application
 alsa-utils # An alternative implementation of Linux sound support
 pulseaudio # A featureful, general-purpose sound server
 pasystray # PulseAudio system tray (a replacement for padevchooser)
+portaudio # A free, cross-platform, open source, audio I/O library
 #
 ### Sound recording
 audacity # A program that lets you manipulate digital audio waveforms
@@ -118,19 +119,21 @@ mlocate # Merging locate/updatedb implementation
 htop # Interactive process viewer
 dosfstools # DOS filesystem utilities
 ntfs-3g # NTFS filesystem driver and utilities
-lolcat # a colourful alternative to cat 
+[AUR]qtqr # A Graphical interface QR Code generator and decoder
 # 
 ### Archive management
 p7zip # Command-line file archiver with high compression ratio
 unrar # The RAR uncompression program
 unzip # For extracting and viewing files in .zip archives
 zip # Compressor/archiver for creating and modifying zipfiles
+xarchiver # GTK+ frontend to various command line archivers
 # 
 ### Display manager
 # I do not use a display manager
 # 
 ### Window manager
 i3 # Install the i3 group - i3gaps is the default
+[AUR]i3-battery-popup-git # A script that shows messages to the user when the battery is almost empty
 #
 ### Status bar
 [AUR]polybar # A fast and easy-to-use status bar
@@ -197,12 +200,12 @@ libreoffice-fresh # with new program enhancements
 # 
 ### File managers
 ranger # A simple, vim-like file manager
-dolphin # KDE file manager
-dolphin-plugins # Extra Dolphin plugins
 thunar # Modern file manager for Xfce
 thunar-archive-plugin # Create and extract archives in Thunar
 thunar-media-tags-plugin # Adds special features for media files to the Thunar File Manager
-thunar-volman # Automatic management of removeable devices in Thunar
+gvfs # Virtual filesystem implementation for GIO
+tumbler # D-Bus service for applications to request thumbnails
+ffmpegthumbnailer # Lightweight video thumbnailer that can be used by file managers
 #
 ### Printing
 cups # the CUPS Printing System - daemon package
@@ -218,6 +221,9 @@ firefox # Standalone web browser from mozilla.org
 flashplugin # flash plugin for firefox
 elinks # An advanced and well-established feature-rich text mode web browser
 w3m # Text-based Web browser as well as pager
+#
+### Social apps
+signal-desktop-bin # Private messaging from your desktop
 #
 ### Tor
 tor # Anonymizing overlay network
@@ -282,6 +288,8 @@ mpv # A free, open source, and cross-platform media player
 mplayer # Media player for Linux
 vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 mediainfo # Supplies technical and tag information about a video or audio file (CLI interface)
+[AUR]popcorntime-bin # Stream movies and TV shows from torrents (stable builds)
+[AUR]subliminal # Python library and CLI tool for searching and downloading subtitles
 #
 ### Screen capturing
 maim # Simple command line utility that takes screenshots (better than scrot)
@@ -290,9 +298,15 @@ fbgrab # A framebuffer screenshot grabber
 # add a screencast tool
 #
 ### For fun
-fortune-mod
-cowsay
-cmatrix
+fortune-mod # The Fortune Cookie Program from BSD games
+cowsay # Configurable talking cow (and a few other creatures)
+cmatrix # A curses-based scrolling 'Matrix'-like screen
+asciiquarium # An aquarium/sea animation in ASCII art
+lolcat # A colourful alternative to cat 
+figlet # A program for making large letters out of ordinary text
+[AUR]tty-clock # Digital clock in ncurses
+[AUR]bash-pipes # Pipes screensaver for bash
+[AUR]oneko # A cat that chases around your cursor
 #
 ### Tabletop RPGs
 [AUR]roll # A tool to roll a user-defined dice sequence and display the result
