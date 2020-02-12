@@ -39,6 +39,7 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     i3
     llpp.conf
     mcomix
+    mpv
     qutebrowser
     ranger
     rofi

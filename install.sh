@@ -286,7 +286,6 @@ feh # Fast and light imlib2-based image viewer
 imagemagick # An image viewing/manipulation program
 mpv # A free, open source, and cross-platform media player
 mplayer # Media player for Linux
-vlc # Multi-platform MPEG, VCD/DVD, and DivX player
 mediainfo # Supplies technical and tag information about a video or audio file (CLI interface)
 [AUR]popcorntime-bin # Stream movies and TV shows from torrents (stable builds)
 [AUR]subliminal # Python library and CLI tool for searching and downloading subtitles

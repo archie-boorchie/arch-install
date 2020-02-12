@@ -139,6 +139,15 @@ Unmount the device with
 $ sudo fusermount -u ~/my-device
 ```
 
+## Default browser
+
+To make qutebrowser your default GUI browser, run in a terminal
+
+```
+$ xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/{https,http}
+```
+
+
 <!-- Compile to html using `pandoc -f markdown -t html5 --template=GitHub.html5
 README.md -s -o README.html`, using the template from
 https://github.com/tajmone/pandoc-goodies/blob/master/templates/html5/github/GitHub.html5
