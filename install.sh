@@ -219,6 +219,8 @@ dmenu # Generic menu for X
 qutebrowser # A keyboard-driven, vim-like browser based on PyQt5
 firefox # Standalone web browser from mozilla.org
 flashplugin # flash plugin for firefox
+chromium # A web browser built for speed, simplicity, and security
+chromium-widevine # A browser plugin designed for the viewing of premium video content
 elinks # An advanced and well-established feature-rich text mode web browser
 w3m # Text-based Web browser as well as pager
 #
@@ -244,7 +246,6 @@ openvpn # An easy-to-use, robust and highly configurable VPN (Virtual Private Ne
 networkmanager-openvpn # NetworkManager VPN plugin for OpenVPN
 #
 ### Youtube utilities 
-minitube # A native YouTube client in Qt. Watch YouTube videos without Flash Player
 youtube-dl # A small command-line program to download videos from YouTube.com and a few more sites
 youtube-viewer # Command line utility for viewing YouTube videos
 #
@@ -286,6 +287,7 @@ feh # Fast and light imlib2-based image viewer
 imagemagick # An image viewing/manipulation program
 mpv # A free, open source, and cross-platform media player
 mplayer # Media player for Linux
+subtitleeditor # A GTK+3 tool to edit subtitles for GNU/Linux/*BSD
 mediainfo # Supplies technical and tag information about a video or audio file (CLI interface)
 [AUR]popcorntime-bin # Stream movies and TV shows from torrents (stable builds)
 [AUR]subliminal # Python library and CLI tool for searching and downloading subtitles
