@@ -14,7 +14,7 @@ For this notes I assume that we deal with an UEFI system.
 I create 4 partitions: 
 
 1.  EFI partition (512M),  
-2.  root partition (about 30G),  
+2.  root partition (about 40G),  
 3.  swap partition (about the same size as RAM),  
 4.  home partition (rest of memory).
 
@@ -146,6 +146,26 @@ To make qutebrowser your default GUI browser, run in a terminal
 ```
 $ xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/{https,http}
 ```
+
+
+# Faster boot
+
+Add to `/etc/default/grub`
+# Hide menu for faster boot, unless shift is pressed
+`GRUB_FORCE_HIDDEN_MENU="true"`
+
+Change menu to hidden in next option
+
+Also use `GRUB_DEFAULT='Arch Linux, with Linux core repo kernel'` to use `linux` instead of `linux-lts` by default
+
+
+## Bluetooth headset
+
+Set `autoenable=true` in `/etc/bluetooth/main.conf` to power on bluetooth on
+boot. Remember to trust your bluetooth headset after pairing it with the
+device.
+
+
 
 
 <!-- Compile to html using `pandoc -f markdown -t html5 --template=GitHub.html5

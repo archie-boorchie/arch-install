@@ -35,15 +35,16 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     
     # dotfiles to /home/user/.config
     linkstoconfig=(
+    alacritty
     dunst
     i3
     llpp.conf
     mcomix
     mpv
+    picom
     qutebrowser
     ranger
     rofi
-    termite
     zathura
     )
     
