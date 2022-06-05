@@ -44,14 +44,17 @@ xorg-xinit # X.Org initialisation program
 xorg-xinput # Small commandline tool to configure devices
 xf86-input-libinput # Generic input driver for the X.Org server based on libinput
 xdotool # Command-line X11 automation tool
-# also install a driver for intel processor (change for other processor)
-xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
 #
-### CPU governor
+### Processor and graphics card (CPU and GPU)
+## Choose the correct drivers for your system
 cpupower # Linux kernel tool to examine and tune power saving related features of your processor
+# xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
+# xf86-video-amdgpu # X.org amdgpu video driver
+# vulkan-radeon # Radeon's Vulkan mesa driver
 #
 ### Keyboard
 xcape # Configure modifier keys to act as other keys when pressed and released on their own	
+screenkey # A screencast tool to display your keys inspired by Screenflick
 #
 ### Hide cursor
 unclutter # A small program for hiding the mouse cursor
@@ -76,7 +79,8 @@ pasystray # PulseAudio system tray (a replacement for padevchooser)
 portaudio # A free, cross-platform, open source, audio I/O library
 #
 ### Sound recording
-audacity # A program that lets you manipulate digital audio waveforms
+# audacity # A program that lets you manipulate digital audio waveforms
+# reaper-bin # A complete digital audio production application for computers
 #
 ### Terminal 
 alacritty # A cross-platform, GPU-accelerated terminal emulator
@@ -90,7 +94,7 @@ zsh-syntax-highlighting	# Fish shell like syntax highlighting for Zsh
 #
 ### Composite manager
 # picom # X compositor that may fix tearing issues
-picom-ibhagwan-git # iBhagwan's compton|picom fork (X compositor) with dual_kawase blur and rounded corners
+[AUR]picom-ibhagwan-git # iBhagwan's compton|picom fork (X compositor) with dual_kawase blur and rounded corners
 #
 ### Python and python modules 
 python2 # A high-level scripting language
@@ -118,6 +122,7 @@ pkgstats # Submit a list of installed packages to the Arch Linux project
 #
 ### More utilities
 acpi # Client for battery, power, and thermal readings
+[AUR]battop # Interactive batteries viewer
 tree # A directory listing program displaying a depth indented list of files
 fd # Simple, fast and user-friendly alternative to find
 mlocate # Merging locate/updatedb implementation
@@ -163,8 +168,8 @@ zathura-pdf-mupdf # EPUB, PDF and XPS support based on MuPDF
 # zathura-pdf-poppler # Adds pdf support to zathura by using the poppler engine
 zathura-ps # PostScript support
 djvulibre # Suite to create, manipulate and view DjVu documents
-evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
-bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
+# evince # Document viewer (PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt))
+# bookworm # A simple user centric eBook reader which displays multiple eBooks formats uniformly
 pdfpc # pdf presentation console
 pdftk # Command-line tool for working with PDFs
 pdfarranger # Helps merge or split PDF documents and rotate, crop and rearrange pages
@@ -182,6 +187,7 @@ texlive-most # TeX Live group
 texlive-langgreek # TeX Live - Fonts and support for typesetting Greek
 biber # A Unicode-capable BibTeX replacement for biblatex users
 ctags # needed for vimtex
+[AUR]mathpix-snipping-tool # Mathpix Snipping Tool
 #
 ### Utils for markup languages
 pandoc # Conversion between markup formats
@@ -199,8 +205,7 @@ adobe-source-serif-pro-fonts # Serif typeface for setting text. Designed to comp
 terminus-font # Monospace bitmap font (for X11 and console) 
 ttf-dejavu # Font family based on the Bitstream Vera Fonts with a wider range of characters
 noto-fonts # Google Noto TTF fonts
-ttf-font-awesome # Iconic font designed for Bootstrap
-awesome-terminal-fonts # fonts/icons for powerlines
+ttf-iosevka-nerd # Typeface family designed for coding, terminal use and technical documents (Nerd Fonts)
 [AUR]ttf-material-design-icons-extended # An extended Material Design icons font by the guys over at materialdesignicons.com (I use the Arch symbol from this font)
 #
 ### Icon themes
@@ -208,7 +213,7 @@ awesome-terminal-fonts # fonts/icons for powerlines
 adwaita-icon-theme # GNOME standard icons
 #
 ### Office apps 
-libreoffice-fresh # with new program enhancements
+# libreoffice-fresh # with new program enhancements
 # 
 ### File managers
 ranger # A simple, vim-like file manager
@@ -231,18 +236,18 @@ dmenu # Generic menu for X
 qutebrowser # A keyboard-driven, vim-like browser based on PyQt5
 firefox # Standalone web browser from mozilla.org
 flashplugin # flash plugin for firefox
-chromium # A web browser built for speed, simplicity, and security
-chromium-widevine # A browser plugin designed for the viewing of premium video content
+# chromium # A web browser built for speed, simplicity, and security
+# chromium-widevine # A browser plugin designed for the viewing of premium video content
 elinks # An advanced and well-established feature-rich text mode web browser
-w3m # Text-based Web browser as well as pager
+# w3m # Text-based Web browser as well as pager
 #
 ### Social apps
-signal-desktop-bin # Private messaging from your desktop
+# signal-desktop-bin # Private messaging from your desktop
 #
 ### Tor
 tor # Anonymizing overlay network
 nyx # Command-line status monitor for tor
-[AUR]tor-browser # Tor Browser Bundle: anonymous browsing using Firefox and Tor (international PKGBUILD)
+# [AUR]tor-browser # Tor Browser Bundle: anonymous browsing using Firefox and Tor (international PKGBUILD)
 #
 ### Network utilities 
 networkmanager # Network connection manager and user applications
@@ -276,7 +281,7 @@ irssi # Modular text mode IRC client with Perl scripting
 #
 ### Scientific software 
 calc # Arbitrary precision console calculator
-stellarium # A stellarium with great graphics and a nice database of sky-objects
+# stellarium # A stellarium with great graphics and a nice database of sky-objects
 # celestia # Real-time space simulation
 # units # Converts between different units
 # kalzium # Periodic Table of Elements
@@ -309,13 +314,12 @@ mpv # A free, open source, and cross-platform media player
 mplayer # Media player for Linux
 subtitleeditor # A GTK+3 tool to edit subtitles for GNU/Linux/*BSD
 mediainfo # Supplies technical and tag information about a video or audio file (CLI interface)
-[AUR]stremio # A one-stop hub for video content aggregation (Movies, TV shows, series, live television or web channels)
+#[AUR]stremio # A one-stop hub for video content aggregation (Movies, TV shows, series, live television or web channels)
 [AUR]subliminal # Python library and CLI tool for searching and downloading subtitles
 #
-### Screen capturing
+### Screen capture
 maim # Simple command line utility that takes screenshots (better than scrot)
 fbgrab # A framebuffer screenshot grabber
-screenkey # A screencast tool to display your keys inspired by Screenflick
 simplescreenrecorder # A feature-rich screen recorder that supports X11 and OpenGL
 #
 ### For fun
@@ -326,8 +330,8 @@ asciiquarium # An aquarium/sea animation in ASCII art
 lolcat # A colourful alternative to cat 
 figlet # A program for making large letters out of ordinary text
 [AUR]tty-clock # Digital clock in ncurses
-[AUR]bash-pipes # Pipes screensaver for bash
-[AUR]oneko # A cat that chases around your cursor
+# [AUR]bash-pipes # Pipes screensaver for bash
+# [AUR]oneko # A cat that chases around your cursor
 #
 ### Tabletop RPGs
 # [AUR]roll # A tool to roll a user-defined dice sequence and display the result
@@ -341,13 +345,13 @@ read -p "Would you like to use reflector to optimise pacman's mirrorlist (Y/n)? 
 yn=${yn:-yes}
 if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     sudo pacman -S reflector --noconfirm --needed
-    sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
     echo -ne "\nRefreshing package lists\n"
     sudo pacman -Syyu
 fi
 
 
-# install official repository packages
+# Install official repository packages
 echo -ne "\nInstalling packages from official repositories\n"
 for X in "${packages[@]}"
 do
@@ -400,13 +404,13 @@ Please check if you wish to keep some of the packages!\n\n"
 sudo pacman -Rns $(pacman -Qtdq) >> $log
 
 
-# Final step: manage dotfiles, create symlinks for them
-read -p "Do you want to clone the archie-boorchie dotfiles repository from GitHub (Y/n)?  " yn
+# Final step: manage dotfiles and create symlinks for them
+read -p "Do you wish to clone the archie-boorchie dotfiles repository from GitHub (Y/n)?  " yn
 yn=${yn:-yes}
 if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     # check if dotfiles directory exists in ~
     if [ -d "dotfiles" ]; then
-        echo -ne "\nError: a dotfiles directory already exists! Aborting...\n"
+        echo -ne "\nError: a ~/dotfiles directory already exists! Aborting...\n"
     else
         git clone https://github.com/archie-boorchie/dotfiles
     fi

@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# We will create a list for the links X -> /home/user/.X 
-# and another for X -> ~/.config/X 
+# We will create a list for the links X -> ~/.X and another for X -> ~/.config/X
 
 # Before the symlinks we have to delete all the configuration files and folders.
 # We can overwite files with ln, but not folders...  For that, it suffices to
@@ -15,7 +14,7 @@ yn=${yn:-no}
 if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     echo "Running the script symlinks.sh ..."
     
-    # dotfiles to /home/user/
+    # dotfiles to ~
     linkstohome=(
     aliases
     asoundrc
@@ -33,7 +32,7 @@ if [ $yn = "yes" -o $yn = "y" -o $yn = "YES" -o $yn = "Y" ]; then
     zshrc
     )
     
-    # dotfiles to /home/user/.config
+    # dotfiles to ~/.config
     linkstoconfig=(
     alacritty
     dunst
